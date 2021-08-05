@@ -34,3 +34,5 @@ yarn-error.log*
 
 # assets
 /assets/
+
+package-lock.json
