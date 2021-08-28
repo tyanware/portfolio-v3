@@ -125,7 +125,7 @@ export default function Introduction() {
                 Discord
               </Button>
             </Link>
-            <Link href="mailto:tyger796@outlook.com" isExternal>
+            <Link href="mailto:hello@tygr.dev" isExternal>
               <Button
                 leftIcon={<FaEnvelope fill="#81A1C1" />}
                 transition="0.3s"
