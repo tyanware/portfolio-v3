@@ -17,7 +17,7 @@ const Container = ({ enableTransition, children }) => {
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
-          did it for the vine
+          Made by tyger796
           <br />
         </Text>
       </Stack>

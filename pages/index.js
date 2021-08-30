@@ -45,6 +45,8 @@ export default function Index({ projects, articles }) {
             property="twitter:image"
             content="https://i.imgur.com/7hLIhHt.png"
           />
+          <script src="https://betteruptime.com/widgets/announcement.js" data-id="128143" async="async" type="text/javascript"></script>
+          
         </Head>
 
         <Stack

@@ -59,6 +59,23 @@ export default function AboutMe() {
   return (
     <>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+        {/* <SlideUpWhenVisible>
+          <Flex alignItems="center" justifyContent="center" position="relative">
+            <Box
+              maxW={{ base: '300px', lg: '350px' }}
+              maxH={{ base: '300px', lg: '350px' }}
+            >
+              <Image
+                src="https://i.imgur.com/WTmPP32.jpg"
+                w="100%"
+                maxW={{ base: '300px', lg: '350px' }}
+                maxH={{ base: '300px', lg: '350px' }}
+                borderRadius="50"
+                alt="tyger796"
+              />
+            </Box>
+          </Flex>
+        </SlideUpWhenVisible> */}
         <SlideUpWhenVisible>
           <Stack spacing={4}>
             <Heading fontFamily="Ubuntu" fontSize="2xl">
@@ -110,33 +127,6 @@ export default function AboutMe() {
               watch some anime, or if the weather's good, I go out on a bike ride with my friends!
             </Text>
           </Stack>
-        </SlideUpWhenVisible>
-        <SlideUpWhenVisible>
-          <Flex alignItems="center" justifyContent="center" position="relative">
-            <Box
-              maxW={{ base: '300px', lg: '350px' }}
-              maxH={{ base: '300px', lg: '350px' }}
-            >
-              <Image
-                src="https://svgsilh.com/svg/26432.svg"
-                filter="invert(0.1)"
-                zIndex={3}
-                position="absolute"
-                top={0}
-                right={15}
-                w={{ base: '100px', lg: '150px' }}
-                alt=""
-              />
-              <Image
-                src="https://secure.gravatar.com/avatar/996bb6f3b26080c346c4a8745b9525fe?s=350"
-                w="100%"
-                maxW={{ base: '300px', lg: '350px' }}
-                maxH={{ base: '300px', lg: '350px' }}
-                borderRadius="50"
-                alt="tyger796"
-              />
-            </Box>
-          </Flex>
         </SlideUpWhenVisible>
       </SimpleGrid>
     </>
