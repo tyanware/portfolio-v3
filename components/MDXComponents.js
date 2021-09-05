@@ -6,6 +6,7 @@ import {
   Text,
   Divider,
   useColorMode,
+  Textarea,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Image from './ChakraNextImage'
@@ -108,8 +109,9 @@ const MDXComponents = {
     />
   ),
   inlineCode: (props) => (
-    <Code colorScheme="blue" fontSize="0.84em" mt={-10} {...props} />
+    <Code colorScheme="blue" fontSize="0.84em" {...props} />
   ),
+  // pre: (props) => <Box display="flex" borderRadius="md" bg="gray.800" p={4} {...props} />,
   br: (props) => <Box height="24px" {...props} />,
   hr: Hr,
   a: CustomLink,

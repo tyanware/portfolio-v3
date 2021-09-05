@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import { useRouter } from 'next/router'
 import {
   Button,
   Flex,
@@ -16,7 +17,6 @@ import {
   Icon,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import styled from '@emotion/styled'
 import useMediaQuery from '../hook/useMediaQuery'
 import { AiOutlineMenu } from 'react-icons/ai'
 
@@ -24,6 +24,10 @@ export default function Navbar({ enableTransition }) {
   const isLargerThan768 = useMediaQuery(768)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const firstField = useRef()
+  const router = useRouter()
+  const pageURL = router.asPath
+  
+  const pageName = "~/tyger" + pageURL;
 
   const NavbarDrawer = () => (
     <>
@@ -37,7 +41,7 @@ export default function Navbar({ enableTransition }) {
         <DrawerContent backgroundColor="secondary">
           <DrawerCloseButton />
           <DrawerHeader borderBottomWidth="1px">
-            ~/tyger/
+            {pageName}
           </DrawerHeader>
 
           <DrawerBody>
@@ -95,7 +99,7 @@ export default function Navbar({ enableTransition }) {
               fontWeight="bold"
               fontSize="32px"
             >
-              ~/tyger/
+              {pageName}
             </Text>
           </NextLink>
           {isLargerThan768 ? (

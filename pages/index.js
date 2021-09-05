@@ -6,7 +6,7 @@ import FeaturedProjects from '../components/FeaturedProjects'
 import AboutMe from '../components/AboutMe'
 import ContactMe from '../components/ContactMe'
 
-export default function Index({ projects, articles }) {
+export default function Index({ projects }) {
   return (
     <>
       <Container enableTransition={true}>
@@ -20,10 +20,10 @@ export default function Index({ projects, articles }) {
           />
 
           <meta property="og:type" content="website" />
-          <meta property="og:url" content="https://tyger796.com" />
+          <meta property="og:url" content="https://tygr.dev" />
           <meta
             property="og:title"
-            content="tyger796"
+            content="tyger796."
           />
           <meta
             property="og:description"
@@ -32,7 +32,7 @@ export default function Index({ projects, articles }) {
           <meta property="og:image" content="https://i.imgur.com/7hLIhHt.png" />
 
           <meta property="twitter:card" content="summary_large_image" />
-          <meta property="twitter:url" content="https://tyger796.com/" />
+          <meta property="twitter:url" content="https://tygr.dev/" />
           <meta
             property="twitter:title"
             content="tyger796"
@@ -45,7 +45,6 @@ export default function Index({ projects, articles }) {
             property="twitter:image"
             content="https://i.imgur.com/7hLIhHt.png"
           />
-          <script src="https://betteruptime.com/widgets/announcement.js" data-id="128143" async="async" type="text/javascript"></script>
           
         </Head>
 
