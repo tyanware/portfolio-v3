@@ -80,8 +80,7 @@ export default function Projects({ projects }) {
             <Divider />
           </Stack>
           <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={8}>
-            {projects
-              .filter((e) =>
+            {projects.filter((e) =>
                 e.fields.title.toLowerCase().includes(query.toLowerCase()),
               )
               .map((project) => (
