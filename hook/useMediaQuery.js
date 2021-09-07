@@ -21,7 +21,7 @@ const useMediaQuery = (width) => {
     }
 
     return () => media.removeEventListener('change', (e) => updateTarget(e))
-  }, [])
+  }, [width, updateTarget])
 
   return targetReached
 }
