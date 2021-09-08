@@ -1,5 +1,5 @@
 {
-  "name": "chakra-next",
+  "name": "website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -36,5 +36,7 @@
     "remark-code-titles": "0.1.2",
     "remark-slug": "7.0.0",
     "stylis": "4.0.10"
-  }
+  },
+  "keywords": [],
+  "description": ""
 }
