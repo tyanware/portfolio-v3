@@ -1,5 +1,5 @@
-import React, { useRef } from 'react'
-import { useRouter } from 'next/router'
+import React, { useRef } from "react";
+import { useRouter } from "next/router";
 import {
   Button,
   Flex,
@@ -14,19 +14,27 @@ import {
   DrawerHeader,
   DrawerBody,
   Stack,
-  Icon,
-} from '@chakra-ui/react'
-import NextLink from 'next/link'
-import useMediaQuery from '../hook/useMediaQuery'
-import { AiOutlineMenu } from 'react-icons/ai'
+  Icon
+} from "@chakra-ui/react";
+import NextLink from "next/link";
+import useMediaQuery from "../hook/useMediaQuery";
+import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Navbar({ enableTransition }) {
-  const isLargerThan768 = useMediaQuery(768)
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const firstField = useRef()
-  const router = useRouter()
-  const pageURL = router.asPath
-  
+  const isLargerThan768 = useMediaQuery(768);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const firstField = useRef();
+  const router = useRouter();
+  var pageURL;
+
+  if (router.asPath == "/projects") {
+    pageURL = "/projects";
+  } else if (router.asPath == "/blog") {
+    pageURL = "/blog";
+  } else {
+    pageURL = "/";
+  }
+
   const pageName = "~/tyger" + pageURL;
 
   const NavbarDrawer = () => (
@@ -40,9 +48,7 @@ export default function Navbar({ enableTransition }) {
         <DrawerOverlay />
         <DrawerContent backgroundColor="secondary">
           <DrawerCloseButton />
-          <DrawerHeader borderBottomWidth="1px">
-            {pageName}
-          </DrawerHeader>
+          <DrawerHeader borderBottomWidth="1px">{pageName}</DrawerHeader>
 
           <DrawerBody>
             <Stack spacing="24px">
@@ -61,12 +67,17 @@ export default function Navbar({ enableTransition }) {
                   Blog
                 </Button>
               </NextLink>
+              <NextLink href="/sponsors" passHref>
+                <Button as="a" variant="ghost" fontSize="16px">
+                  Sponsors
+                </Button>
+              </NextLink>
             </Stack>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
     </>
-  )
+  );
 
   return (
     <Box zIndex="99">
@@ -118,7 +129,12 @@ export default function Navbar({ enableTransition }) {
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
                   Blog
                 </Button>
-              </NextLink>{' '}
+              </NextLink>
+              <NextLink href="/login" passHref>
+                <Button as="a" variant="solid" p="4" ml="3vw" fontSize="16px">
+                  Login
+                </Button>
+              </NextLink>{" "}
             </Box>
           ) : (
             <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />
@@ -127,5 +143,5 @@ export default function Navbar({ enableTransition }) {
       </Slide>
       <NavbarDrawer />
     </Box>
-  )
+  );
 }

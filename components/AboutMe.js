@@ -94,7 +94,7 @@ export default function AboutMe() {
                 text="no-code tools"
                 content="I used to make games without code using Scratch, and build simple websites with Wix back in primary school."
               />
-              back in 2013, and from that, I self-tought myself how to code.
+              back in 2013, and from that, I self-taught myself how to code.
               Fast-forward to today, I program in various languages like {' '}
               <MoreInfo
                 text="JavaScript,"
