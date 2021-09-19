@@ -68,7 +68,7 @@ export default function Navbar({ enableTransition }) {
                 </Button>
               </NextLink>
               <NextLink href="/account" passHref>
-                <Button as="a" variant="ghost" fontSize="16px">
+                <Button as="a" variant="solid" colorScheme='blue' fontSize="16px">
                   Account
                 </Button>
               </NextLink>
@@ -131,7 +131,7 @@ export default function Navbar({ enableTransition }) {
                 </Button>
               </NextLink>
               <NextLink href="/account" passHref>
-                <Button as="a" variant="solid" p="4" ml="3vw" fontSize="16px">
+                <Button as="a" variant="solid" colorScheme="blue" p="4" ml="3vw" fontSize="16px">
                   Account
                 </Button>
               </NextLink>{" "}
