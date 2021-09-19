@@ -9,7 +9,7 @@ import {
 import * as React from "react";
 import { PasswordField } from "../LoginPage/PasswordField";
 
-export const LoginForm = (props) => (
+export const SignupForm = (props) => (
   <chakra.form
     onSubmit={(e) => {
       e.preventDefault(); // login logic here
