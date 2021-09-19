@@ -89,28 +89,6 @@ export default function Auth() {
                     </Card>
                 </Box>
             </Box>
-
-            {/* <div>
-                <input
-                    className="inputField"
-                    type="email"
-                    placeholder="Your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-            </div>
-            <div>
-                <button
-                    onClick={(e) => {
-                        e.preventDefault()
-                        handleLogin(email)
-                    }}
-                    className="block button"
-                    disabled={loading}
-                >
-                    <span>{loading ? 'Loading' : 'Send magic link'}</span>
-                </button>
-            </div> */}
         </>
     )
 }
