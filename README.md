@@ -60,6 +60,7 @@ You can deploy easily by using [Vercel](https://vercel.com/) 🎉
 `pages/projects/index.js` = Projects archive page  
 `pages/blog/index.js` = Blog listings page  
 `pages/blog/[slug].js` = Blog post page  
+`pages/account/index.js` = Accounts
 
 ## ⚙ Tech Stack
 - Next.js  
@@ -67,3 +68,4 @@ You can deploy easily by using [Vercel](https://vercel.com/) 🎉
 - Contentful CMS  
 - MDX (next-mdx-remote)  
 - Google Analytics (react-ga)
+- Supabase (Database)
