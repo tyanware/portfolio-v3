@@ -4,7 +4,6 @@ import {
     Heading,
     SimpleGrid,
     useColorModeValue,
-    FormHelperText,
     Text,
     chakra,
     Stack,
@@ -15,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { useState } from 'react'
 import { supabase } from '../util/supabaseClient'
-import { DividerWithText } from "./account/DividerWithText";
 import { Card } from "./account/Card";
 import Head from 'next/head'
 import { useRouter } from "next/router";
@@ -30,7 +28,7 @@ export default function Auth() {
             setLoading(true)
             const { error } = await supabase.auth.signIn({ email })
             if (error) throw error
-            alert('Check your email for the login link!')
+            alert('Success! Please check your email.')
         } catch (error) {
             alert(error.error_description || error.message)
         } finally {
@@ -70,14 +68,13 @@ export default function Auth() {
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
                                     />
-                                    <FormHelperText>Don't worry if you don't have an account already, we will create one for you.</FormHelperText>
                                 </FormControl>
                                 <SimpleGrid columns={2} spacing={4} maxWidth="md">
                                     <Button onClick={() => router.push('/')} colorScheme="blue" size="lg" fontSize="md">
                                         Go back
                                     </Button>
-                                    <Button type="submit" colorScheme="blue" size="lg" fontSize="md">
-                                        Sign in
+                                    <Button type="submit" disabled={loading} colorScheme="blue" size="lg" fontSize="md">
+                                        {loading ? 'Loading...' : 'Continue'}
                                     </Button>
                                 </SimpleGrid>
                             </Stack>

@@ -1,10 +1,10 @@
 import { Button } from '@chakra-ui/button'
 import { FormControl, FormLabel } from '@chakra-ui/form-control'
 import { Input } from '@chakra-ui/input'
-import { Box, Divider, Heading, SimpleGrid, Stack } from '@chakra-ui/layout'
+import { SimpleGrid, Stack, Box, Heading, HStack } from '@chakra-ui/layout'
+import { SlideFade } from '@chakra-ui/transition'
 import { useState, useEffect } from 'react'
 import { supabase } from '../util/supabaseClient'
-import { Card } from './account/Card'
 
 export default function Account({ session }) {
   const [loading, setLoading] = useState(true)
@@ -72,28 +72,43 @@ export default function Account({ session }) {
 
   return (
     <>
-      <Heading size="lg" textAlign="center" h={20}>Personal Info</Heading>
-      <Stack align="center" spacing={6}>
-        <FormControl id="email">
-          <FormLabel>Email</FormLabel>
-          <Input maxWidth="lg" isDisabled value={session.user.email}></Input>
-        </FormControl>
+			<Stack spacing={10} justifyContent="flex-start" alignItems="flex-start">
+				<SlideFade
+					direction="top"
+					in={true}
+					transition={{ enter: { duration: 0.4, delay: 0.7 } }}
+				>
+					<Box position="relative">
+						<Heading
+							color="white"
+							fontSize="lg"
+							fontWeight="medium"
+							whiteSpace="pre-wrap"
+						>
+							Account
+							</Heading>
+						<FormControl id="email">
+							<FormLabel>Email</FormLabel>
+							<Input maxWidth="lg" isDisabled value={session.user.email}></Input>
+						</FormControl>
 
-        <FormControl id="username">
-          <FormLabel>Username</FormLabel>
-          <Input maxWidth="lg" value={session.user.username} value={username || ''} onChange={(e) => setUsername(e.target.value)}></Input>
-        </FormControl>
+						<FormControl id="username">
+							<FormLabel>Username</FormLabel>
+							<Input maxWidth="lg" value={session.user.username} value={username || ''} onChange={(e) => setUsername(e.target.value)}></Input>
+						</FormControl>
 
-        <FormControl id="website">
-          <FormLabel>Website</FormLabel>
-          <Input maxWidth="lg" value={session.user.website} value={website || ''} onChange={(e) => setWebsite(e.target.value)}></Input>
-        </FormControl>
-      </Stack>
+						<FormControl id="website">
+							<FormLabel>Website</FormLabel>
+							<Input maxWidth="lg" value={session.user.website} value={website || ''} onChange={(e) => setWebsite(e.target.value)}></Input>
+						</FormControl>
 
-      <SimpleGrid maxWidth="md" columns={2} spacing={4}>
-        <Button onClick={() => updateProfile({ username, website, avatar_url })} disabled={loading}>{loading ? 'Loading...' : 'Update'}</Button>
-        <Button onClick={() => supabase.auth.signOut()}>Log out</Button>
-      </SimpleGrid>
+						<HStack spacing="5">
+							<Button onClick={() => updateProfile({ username, website, avatar_url })} disabled={loading}>{loading ? 'Loading...' : 'Update'}</Button>
+							<Button onClick={() => supabase.auth.signOut()}>Log out</Button>
+						</HStack>
+					</Box>
+				</SlideFade>		  
+			</Stack>
     </>
   )
 }
