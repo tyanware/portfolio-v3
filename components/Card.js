@@ -7,7 +7,6 @@ import {
   TagLabel,
   Link,
   ScaleFade,
-  chakra,
 } from '@chakra-ui/react'
 import {
   FaPython,
@@ -16,10 +15,8 @@ import {
   FaCode,
   FaGithub,
   FaExternalLinkAlt,
-  FaLaravel,
   FaDiscord,
   FaNodeJs,
-  FaReact,
 } from 'react-icons/fa'
 import {
   SiCsharp,

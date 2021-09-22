@@ -19,7 +19,7 @@ export default function Introduction() {
   const isLargerThan800 = useMediaQuery(800)
   const isLargerThan900 = useMediaQuery(900)
   const isLargerThan1200 = useMediaQuery(1200)
-  let imageSize = isLargerThan1200 ? '450px' : '250px'
+  let imageSize = isLargerThan1200 ? '500px' : '250px'
   const handleClick = (event) => {
     ReactGA.event({
       category: 'click',
@@ -132,7 +132,7 @@ export default function Introduction() {
                   Discord
                 </Button>
               </Link>
-              <Link href="mailto:hello@tygr.dev" isExternal>
+              <Link href="mailto:hi@tygr.dev" isExternal>
                 <Button
                   leftIcon={<FaEnvelope fill="#81A1C1" />}
                   transition="0.3s"
@@ -152,13 +152,13 @@ export default function Introduction() {
           in={true}
           transition={{ enter: { duration: 0.4, delay: 1.2 } }}
         >
-          <Flex alignItems="center" justifyContent="center" position="relative">
+          <Flex marginLeft="100" alignItems="normal" justifyContent="center" position="relative">
             <Box
               maxW={{ base: imageSize, lg: '500px' }}
               maxH={{ base: imageSize, lg: '500px' }}
             >
               <Image
-                src={isLargerThan900 ? "https://secure.gravatar.com/avatar/996bb6f3b26080c346c4a8745b9525fe?s=500" : ""}
+                src={isLargerThan900 ? "https://avatars.githubusercontent.com/u/59417077?s=500&v=4" : ""}
                 w="100%"
                 h="100%"
                 maxW={{ base: imageSize, lg: '500px' }}

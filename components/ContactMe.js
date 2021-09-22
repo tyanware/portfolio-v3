@@ -64,7 +64,7 @@ export default function ContactMe() {
                 </Button>
               </Link>
               <Link
-                href="https://dsc.gg/tyger"
+                href="https://discord.com/users/845818120777236491"
                 isExternal
                 onClick={() => handleClick('contact_discord')}
               >

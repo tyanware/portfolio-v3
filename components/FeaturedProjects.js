@@ -34,9 +34,8 @@ export default function FeaturedProjects({ projects }) {
                 <Heading
                   fontSize={{ base: 'xl', md: '2xl' }}
                   color="displayColor"
-                  fontFamily="Ubuntu"
                 >
-                  All Creative Works.
+                  Featured projects.
                 </Heading>
                 <NextLink href="/projects" passHref>
                   <Link

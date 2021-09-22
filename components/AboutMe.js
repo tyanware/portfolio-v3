@@ -3,9 +3,6 @@ import {
   Text,
   Stack,
   Heading,
-  Image,
-  Flex,
-  Box,
   chakra,
   Popover,
   PopoverTrigger,
@@ -19,6 +16,8 @@ import ReactGA from 'react-ga'
 
 export default function AboutMe() {
   const isLargerThan800 = useMediaQuery(800)
+  const isLargerThan1200 = useMediaQuery(1200)
+
   const handleHover = (event) => {
     ReactGA.event({
       category: 'hover',
@@ -59,23 +58,6 @@ export default function AboutMe() {
   return (
     <>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
-        {/* <SlideUpWhenVisible>
-          <Flex alignItems="center" justifyContent="center" position="relative">
-            <Box
-              maxW={{ base: '300px', lg: '350px' }}
-              maxH={{ base: '300px', lg: '350px' }}
-            >
-              <Image
-                src="https://i.imgur.com/WTmPP32.jpg"
-                w="100%"
-                maxW={{ base: '300px', lg: '350px' }}
-                maxH={{ base: '300px', lg: '350px' }}
-                borderRadius="50"
-                alt="tyger796"
-              />
-            </Box>
-          </Flex>
-        </SlideUpWhenVisible> */}
         <SlideUpWhenVisible>
           <Stack spacing={4}>
             <Heading fontFamily="Ubuntu" fontSize="2xl">
@@ -128,6 +110,23 @@ export default function AboutMe() {
             </Text>
           </Stack>
         </SlideUpWhenVisible>
+        {/* <SlideUpWhenVisible>
+          <Flex alignItems="center" justifyContent="center" position="relative">
+            <Box
+              maxW={{ base: '300px', lg: '350px' }}
+              maxH={{ base: '300px', lg: '350px' }}
+            >
+              <Image
+                src="https://i.imgur.com/WTmPP32.jpg"
+                w="100%"
+                maxW={{ base: '300px', lg: '350px' }}
+                maxH={{ base: '300px', lg: '350px' }}
+                borderRadius="50"
+                alt="tyger796"
+              />
+            </Box>
+          </Flex>
+        </SlideUpWhenVisible> */}
       </SimpleGrid>
     </>
   )

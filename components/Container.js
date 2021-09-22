@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { chakra, Flex, Stack, Text } from '@chakra-ui/react'
+import { Flex, Stack, Text } from '@chakra-ui/react'
 import Navbar from './Navbar'
 import ReactGA from 'react-ga'
 
@@ -18,7 +18,6 @@ const Container = ({ enableTransition, children }) => {
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
           Made by tyger796
-          <br />
         </Text>
       </Stack>
     </>
