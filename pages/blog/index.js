@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import { Stack, Heading, Text, Divider, Flex, Box } from '@chakra-ui/react'
-import Head from 'next/head'
-import Link from 'next/link'
-import Container from '../../components/Container'
-import { FaSearch } from 'react-icons/fa'
-import { Input, InputGroup, InputRightElement } from '@chakra-ui/input'
-import useMediaQuery from '../../hook/useMediaQuery'
-import readingTime from 'reading-time'
-import dateFormat from 'dateformat'
+import { useState } from "react";
+import { Stack, Heading, Text, Divider, Flex, Box } from "@chakra-ui/react";
+import Head from "next/head";
+import Link from "next/link";
+import Container from "../../components/Container";
+import { FaSearch } from "react-icons/fa";
+import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
+import useMediaQuery from "../../hook/useMediaQuery";
+import readingTime from "reading-time";
+import dateFormat from "dateformat";
 
 export default function Index({ articles }) {
-  const [query, setQuery] = useState('')
-  const handleChange = (e) => setQuery(e.target.value)
-  const isLargerThan1024 = useMediaQuery(1024)
+  const [query, setQuery] = useState("");
+  const handleChange = (e) => setQuery(e.target.value);
 
   return (
     <Container>
@@ -50,13 +49,13 @@ export default function Index({ articles }) {
         spacing={5}
         justifyContent="center"
         alignItems="flex-start"
-        px={['5vw', '10vw']}
-        my={['15vh', '15vh', '22.5vh', '22.5vh']}
+        px={["5vw", "10vw"]}
+        my={["15vh", "15vh", "22.5vh", "22.5vh"]}
       >
-        <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
+        <Heading color="displayColor" fontSize={{ base: "4xl", md: "6xl" }}>
           Blog
         </Heading>
-        <Text fontSize={{ base: '14px', md: '16px' }}>
+        <Text fontSize={{ base: "14px", md: "16px" }}>
           This is where I share my writings on programming, tutorials, and my
           experiences.
         </Text>
@@ -73,37 +72,16 @@ export default function Index({ articles }) {
         <Stack spacing={5}>
           {articles
             .filter((e) =>
-              e.fields.title.toLowerCase().includes(query.toLowerCase()),
+              e.fields.title.toLowerCase().includes(query.toLowerCase())
             )
             .map((article) => (
               <Stack
-                direction={isLargerThan1024 ? 'row' : 'column'}
+                direction="column"
                 alignItems="flex-start"
                 justifyContent="flex-start"
               >
-                <Text
-                  color="textSecondary"
-                  display={isLargerThan1024 ? 'block' : 'none'}
-                >
-                  {dateFormat(Date.parse(article.fields.date), 'mmmm d yyyy')}
-                  <br />{' '}
-                  <Text fontSize="sm" textAlign="right">
-                    {readingTime(article.fields.body).text}
-                  </Text>
-                </Text>
-                <Text
-                  color="textSecondary"
-                  fontSize="sm"
-                  display={isLargerThan1024 ? 'none' : 'block'}
-                >
-                  {dateFormat(Date.parse(article.fields.date), 'mmmm d yyyy')}{' '}
-                  <Box as="span" fontSize="xs">
-                    &bull;
-                  </Box>{' '}
-                  {readingTime(article.fields.body).text}
-                </Text>
-                <Flex flexDirection="column" px={isLargerThan1024 ? 10 : 0}>
-                  <Link href={'/blog/' + article.fields.slug}>
+                <Flex flexDirection="column">
+                  <Link href={"/blog/" + article.fields.slug}>
                     <a>
                       <Text
                         color="displayColor"
@@ -112,6 +90,16 @@ export default function Index({ articles }) {
                         cursor="pointer"
                       >
                         {article.fields.title}
+                      </Text>
+                      <Text color="textSecondary" fontSize="sm" display="block">
+                        {dateFormat(
+                          Date.parse(article.fields.date),
+                          "mmmm d yyyy"
+                        )}{" "}
+                        <Box as="span" fontSize="s">
+                          &bull;
+                        </Box>{" "}
+                        {readingTime(article.fields.body).text}
                       </Text>
                       <Text color="textSecondary">
                         {article.fields.summary}
@@ -128,24 +116,24 @@ export default function Index({ articles }) {
         </Stack>
       </Stack>
     </Container>
-  )
+  );
 }
 
-let client = require('contentful').createClient({
+let client = require("contentful").createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-})
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+});
 
 export async function getStaticProps() {
   let data = await client.getEntries({
-    content_type: 'blogPosts',
+    content_type: "blogPosts",
     limit: 3,
-    order: 'sys.createdAt',
-  })
+    order: "sys.createdAt"
+  });
 
   return {
     props: {
-      articles: data.items,
-    },
-  }
+      articles: data.items
+    }
+  };
 }
