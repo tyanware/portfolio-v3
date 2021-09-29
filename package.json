@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "boop",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -40,5 +40,5 @@
     "stylis": "4.0.10"
   },
   "keywords": [],
-  "description": ""
+  "description": "Development server for my website."
 }
