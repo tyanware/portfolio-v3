@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Flex, Stack, Text } from '@chakra-ui/react'
+import { Flex, Stack, Text, Link } from '@chakra-ui/react'
 import Navbar from './Navbar'
 import ReactGA from 'react-ga'
 
@@ -17,7 +17,33 @@ const Container = ({ enableTransition, children }) => {
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
-          at the end of everything, hold onto anything.
+          Designed and Developed by tyger796.
+          <br />
+          Built with{" "}
+          <Link
+            href="https://nextjs.org/"
+            fontWeight="semibold"
+            color="button1"
+          >
+            Next.js
+          </Link>{" "}
+          &{" "}
+          <Link
+            href="https://chakra-ui.com/"
+            fontWeight="semibold"
+            color="button1"
+          >
+            Chakra UI
+          </Link>
+          . Hosted on{" "}
+          <Link
+            href="https://vercel.com/solutions/nextjs?utm_source=next-site&utm_medium=banner&utm_campaign=next-website"
+            fontWeight="semibold"
+            color="button1"
+          >
+            Vercel
+          </Link>
+          .
         </Text>
       </Stack>
     </>

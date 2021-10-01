@@ -130,11 +130,11 @@ export default function Navbar({ enableTransition }) {
                   Blog
                 </Button>
               </NextLink>
-              <NextLink href="/account" passHref>
+              {/* <NextLink href="/account" passHref>
                 <Button as="a" variant="solid" colorScheme="blue" p="4" ml="3vw" fontSize="16px">
                   Account
                 </Button>
-              </NextLink>{" "}
+              </NextLink>{" "} */}
             </Box>
           ) : (
             <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />
