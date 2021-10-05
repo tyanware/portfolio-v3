@@ -3,10 +3,11 @@ import { Stack } from '@chakra-ui/react'
 import Container from '../components/Container'
 import Introduction from '../components/Introduction'
 import FeaturedProjects from '../components/FeaturedProjects'
+import PhotographyHighlights from '../components/PhotographyHighlights'
 import AboutMe from '../components/AboutMe'
 import ContactMe from '../components/ContactMe'
 
-export default function Index({ projects }) {
+export default function Index({ projects, photos }) {
   return (
     <>
       <Container enableTransition={true}>
@@ -59,6 +60,7 @@ export default function Index({ projects }) {
           <Introduction />
           <AboutMe />
           <FeaturedProjects projects={projects} />
+          <PhotographyHighlights photos={photos} />
           <ContactMe />
         </Stack>
       </Container>
@@ -78,14 +80,14 @@ export async function getStaticProps() {
   })
 
   let data2 = await client.getEntries({
-    content_type: 'blogPosts',
-    limit: 4,
-    order: 'sys.createdAt',
+    content_type: 'photographyHighlights',
+    order: 'sys.updatedAt',
   })
+
   return {
     props: {
       projects: data.items,
-      articles: data2.items.reverse(),
+      photos: data2.items.reverse(),
     },
   }
 }

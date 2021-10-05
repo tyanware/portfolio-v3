@@ -12,18 +12,11 @@ import {
 } from '@chakra-ui/react'
 import useMediaQuery from '../hook/useMediaQuery'
 import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
-import ReactGA from 'react-ga'
 
 export default function AboutMe() {
   const isLargerThan800 = useMediaQuery(800)
   const isLargerThan1200 = useMediaQuery(1200)
 
-  const handleHover = (event) => {
-    ReactGA.event({
-      category: 'hover',
-      action: event,
-    })
-  }
   const MoreInfo = ({ text, content }) => {
     return (
       <>
@@ -32,7 +25,6 @@ export default function AboutMe() {
           <Popover trigger="hover" placement="right">
             <PopoverTrigger>
               <chakra.span
-                onMouseOver={() => handleHover(`about_${text}`)}
                 color="button1"
                 cursor="help"
               >

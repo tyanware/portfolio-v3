@@ -1,14 +1,8 @@
 import React, { useEffect } from 'react'
 import { Flex, Stack, Text, Link } from '@chakra-ui/react'
 import Navbar from './Navbar'
-import ReactGA from 'react-ga'
 
 const Container = ({ enableTransition, children }) => {
-  useEffect(() => {
-    ReactGA.initialize(process.env.NEXT_PUBLIC_UA_CODE)
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  }, [])
-
   return (
     <>
       <Navbar enableTransition={enableTransition} />

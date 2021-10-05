@@ -13,19 +13,12 @@ import {
 } from '@chakra-ui/react'
 import { FaEnvelope, FaGithub, FaDiscord } from 'react-icons/fa'
 import useMediaQuery from '../hook/useMediaQuery'
-import ReactGA from 'react-ga'
 
 export default function Introduction() {
   const isLargerThan800 = useMediaQuery(800)
   const isLargerThan900 = useMediaQuery(900)
   const isLargerThan1200 = useMediaQuery(1200)
   let imageSize = isLargerThan1200 ? '500px' : '250px'
-  const handleClick = (event) => {
-    ReactGA.event({
-      category: 'click',
-      action: event,
-    })
-  }
   return (
     <>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
@@ -116,7 +109,6 @@ export default function Introduction() {
                   position="static"
                   size={isLargerThan800 ? 'md' : 'sm'}
                   color="white"
-                  onClick={() => handleClick('introduction_github')}
                 >
                   Github
                 </Button>
@@ -127,7 +119,6 @@ export default function Introduction() {
                   position="static"
                   size={isLargerThan800 ? 'md' : 'sm'}
                   color="white"
-                  onClick={() => handleClick('introduction_discord')}
                 >
                   Discord
                 </Button>
@@ -139,7 +130,6 @@ export default function Introduction() {
                   position="static"
                   size={isLargerThan800 ? 'md' : 'sm'}
                   color="white"
-                  onClick={() => handleClick('introduction_email')}
                 >
                   Email
                 </Button>

@@ -24,7 +24,6 @@ import {
   SiCss3,
 } from 'react-icons/si'
 import useMediaQuery from '../hook/useMediaQuery'
-import ReactGA from 'react-ga'
 
 import Image from './ChakraNextImage'
 
@@ -81,12 +80,6 @@ export default function Cards({
       <TagLabel>{item}</TagLabel>
     </Tag>
   ))
-  const handleClick = (event) => {
-    ReactGA.event({
-      category: 'click',
-      action: event,
-    })
-  }
 
   return (
     <Stack
@@ -123,9 +116,6 @@ export default function Cards({
                 <Link
                   href={githubLink}
                   color="white"
-                  onClick={() =>
-                    handleClick(`githublink_${title.replace('@', '-at-')}`)
-                  }
                   isExternal
                 >
                   <FaGithub size={23} />
@@ -135,9 +125,6 @@ export default function Cards({
                 <Link
                   href={deployLink}
                   color="white"
-                  onClick={() =>
-                    handleClick(`deploylink_${title.replace('@', '-at')}`)
-                  }
                   isExternal
                 >
                   <FaExternalLinkAlt size={20} />

@@ -10,16 +10,9 @@ import {
 import NextLink from 'next/link'
 import Cards from './Card'
 import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
-import ReactGA from 'react-ga'
+import { Divider } from '@chakra-ui/react'
 
 export default function FeaturedProjects({ projects }) {
-  const handleClick = (event) => {
-    ReactGA.event({
-      category: 'click',
-      action: event,
-    })
-  }
-
   return (
     <>
       <Stack spacing={8} w="full">
@@ -38,9 +31,7 @@ export default function FeaturedProjects({ projects }) {
                   Featured projects.
                 </Heading>
                 <NextLink href="/projects" passHref>
-                  <Link
-                    onClick={() => handleClick('featuredprojects_explore more')}
-                  >
+                  <Link>
                     <Text
                       display={{ base: 'block', md: 'none' }}
                       fontSize={{ base: 'sm', md: 'xl' }}
@@ -57,9 +48,7 @@ export default function FeaturedProjects({ projects }) {
                 Here's some of my projects that I have worked on.
               </Text>
               <NextLink href="/projects">
-                <Link
-                  onClick={() => handleClick('featuredprojects_explore more')}
-                >
+                <Link>
                   <Text
                     display={{ base: 'none', md: 'block' }}
                     fontSize={{ base: 'md', md: 'xl' }}
