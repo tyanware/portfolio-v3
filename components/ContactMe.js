@@ -2,16 +2,9 @@ import { Link, Button, chakra, Heading, Stack, Text } from '@chakra-ui/react'
 import useMediaQuery from '../hook/useMediaQuery'
 import { FaDiscord, FaGithub, FaInstagram, FaTwitch, FaTwitter, FaYoutube, FaWindowMaximize } from 'react-icons/fa'
 import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
-import ReactGA from 'react-ga'
 
 export default function ContactMe() {
   const isLargerThan800 = useMediaQuery(800)
-  const handleClick = (event) => {
-    ReactGA.event({
-      category: 'click',
-      action: event,
-    })
-  }
   return (
     <>
       <Stack
@@ -52,7 +45,6 @@ export default function ContactMe() {
               <Link
                 href="https://github.com/tyger796"
                 isExternal
-                onClick={() => handleClick('contact_github')}
               >
                 <Button
                   leftIcon={<FaGithub fill="#81A1C1" />}
@@ -66,7 +58,6 @@ export default function ContactMe() {
               <Link
                 href="https://discord.com/users/845818120777236491"
                 isExternal
-                onClick={() => handleClick('contact_discord')}
               >
                 <Button
                   leftIcon={<FaDiscord fill="#81A1C1" />}
@@ -80,7 +71,6 @@ export default function ContactMe() {
               <Link
                 href="https://www.instagram.com/tyger796_"
                 isExternal
-                onClick={() => handleClick('contact_instagram')}
               >
                 <Button
                   leftIcon={<FaInstagram fill="#81A1C1" />}
@@ -98,7 +88,6 @@ export default function ContactMe() {
               <Link
                 href="https://www.twitter.com/tyger796"
                 isExternal
-                onClick={() => handleClick('contact_twitter')}
               >
                 <Button
                   leftIcon={<FaTwitter fill="#81A1C1" />}
@@ -112,7 +101,6 @@ export default function ContactMe() {
               <Link
                 href="https://www.youtube.com/channel/UCDCBrrYkHrt4cFnoA2SKMdA"
                 isExternal
-                onClick={() => handleClick('contact_youtube')}
               >
                 <Button
                   leftIcon={<FaYoutube fill="#81A1C1" />}
@@ -126,7 +114,6 @@ export default function ContactMe() {
               <Link
                 href="https://www.twitch.tv/tyger796"
                 isExternal
-                onClick={() => handleClick('contact_twitch')}
               >
                 <Button
                   leftIcon={<FaTwitch fill="#81A1C1" />}
