@@ -130,11 +130,11 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </NextLink>
-              <NextLink href="/photography" passHref>
+              {/* <NextLink href="/photography" passHref>
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
                   Photography
                 </Button>
-              </NextLink>
+              </NextLink> */}
               <NextLink href="/blog" passHref>
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
                   Blog
