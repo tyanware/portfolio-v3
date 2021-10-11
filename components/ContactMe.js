@@ -7,11 +7,12 @@ import {
   FaTwitch,
   FaTwitter,
   FaYoutube,
+  FaWindowMaximize
 } from "react-icons/fa";
 import SlideUpWhenVisible from "../hook/SlideUpWhenVisible";
 
 export default function ContactMe() {
-  const isLargerThan800 = useMediaQuery(800)
+  const isLargerThan800 = useMediaQuery(800);
   return (
     <>
       <Stack
@@ -22,41 +23,35 @@ export default function ContactMe() {
         justifyContent="center"
       >
         <SlideUpWhenVisible>
-          <Heading fontSize={{ base: '4xl', md: '5xl' }} textAlign="center">
+          <Heading fontSize={{ base: "4xl", md: "5xl" }} textAlign="center">
             Places to find me.
           </Heading>
         </SlideUpWhenVisible>
 
         <SlideUpWhenVisible>
           <Text fontSize="md" color="textSecondary" textAlign="center">
-            I'm currently working on projects over at {' '}
+            I'm currently working on projects over at{" "}
             <chakra.span
               color="button1"
-              display={{ base: 'block', md: 'inline' }}
+              display={{ base: "block", md: "inline" }}
             >
-              {' '}
+              {" "}
               Nord Studios.
             </chakra.span>
-            <br /> But here are a few places you can find me, That's all folks! 👋
+            <br /> But here are a few places you can find me, That's all folks!
+            👋
           </Text>
         </SlideUpWhenVisible>
-      <Stack />
-        
-      <Stack
-        spacing={5}
-        w="100%"
-        alignItems="center"
-        >
+        <Stack />
+
+        <Stack spacing={5} w="100%" alignItems="center">
           <SlideUpWhenVisible>
             <Stack isInline spacing={4}>
-              <Link
-                href="https://github.com/tyger796"
-                isExternal
-              >
+              <Link href="https://github.com/tygerxqt" isExternal>
                 <Button
                   leftIcon={<FaGithub fill="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   GitHub
@@ -69,20 +64,17 @@ export default function ContactMe() {
                 <Button
                   leftIcon={<FaDiscord fill="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   Discord
                 </Button>
               </Link>
-              <Link
-                href="https://www.instagram.com/tyger796_"
-                isExternal
-              >
+              <Link href="https://www.instagram.com/tygerxqt" isExternal>
                 <Button
                   leftIcon={<FaInstagram fill="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   Instagram
@@ -92,12 +84,11 @@ export default function ContactMe() {
           </SlideUpWhenVisible>
           <SlideUpWhenVisible>
             <Stack isInline spacing={4}>
-
               <Link href="https://www.twitter.com/tygerxqt" isExternal>
                 <Button
                   leftIcon={<FaTwitter fill="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   Twitter
@@ -110,20 +101,17 @@ export default function ContactMe() {
                 <Button
                   leftIcon={<FaYoutube fill="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   YouTube
                 </Button>
               </Link>
-              <Link
-                href="https://www.twitch.tv/tyger796"
-                isExternal
-              >
+              <Link href="https://www.twitch.tv/tygerxqt" isExternal>
                 <Button
                   leftIcon={<FaTwitch fill="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   Twitch

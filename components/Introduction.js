@@ -31,10 +31,10 @@ export default function Introduction() {
               <Image
                 src="https://svgsilh.com/svg/26432.svg"
                 filter="invert(0.1)"
-                w={{ base: '70px', md: '150px' }}
+                w={{ base: "70px", md: "150px" }}
                 position="absolute"
-                top={{ base: '0', md: '-15' }}
-                left={{ base: '-5', md: '-10' }}
+                top={{ base: "0", md: "-15" }}
+                left={{ base: "-5", md: "-10" }}
                 zIndex={0}
                 alt=""
               ></Image>
@@ -56,7 +56,7 @@ export default function Introduction() {
               position="relative"
               zIndex={1}
             >
-              tyger796.
+              tygerxqt.
             </Heading>
           </SlideFade>
 
@@ -73,7 +73,7 @@ export default function Introduction() {
               letterSpacing="-1.6px"
             >
               <Box color="displayColor" as="span">
-              A self-taught Web/IOT Developer.
+                A self-taught Web/IOT Developer.
               </Box>
             </Heading>
           </SlideFade>
@@ -88,9 +88,7 @@ export default function Introduction() {
               <br />
               <Stack isInline spacing={1}>
                 <Box>🎓</Box>
-                <Box>
-                  Currently a Student from the UK.
-                </Box>
+                <Box>Currently a Student from the UK.</Box>
               </Stack>
             </Text>
           </SlideFade>
@@ -100,11 +98,11 @@ export default function Introduction() {
             transition={{ enter: { duration: 0.4, delay: 1.0 } }}
           >
             <Stack isInline spacing={4}>
-              <Link href="https://github.com/tyger796" isExternal>
+              <Link href="https://github.com/tygerxqt" isExternal>
                 <Button
                   leftIcon={<FaGithub color="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   Github
@@ -114,7 +112,7 @@ export default function Introduction() {
                 <Button
                   leftIcon={<FaDiscord color="#81A1C1" />}
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   Discord
@@ -125,7 +123,7 @@ export default function Introduction() {
                   leftIcon={<FaEnvelope fill="#81A1C1" />}
                   transition="0.3s"
                   position="static"
-                  size={isLargerThan800 ? 'md' : 'sm'}
+                  size={isLargerThan800 ? "md" : "sm"}
                   color="white"
                 >
                   Email
@@ -146,17 +144,21 @@ export default function Introduction() {
             position="relative"
           >
             <Box
-              maxW={{ base: imageSize, lg: '500px' }}
-              maxH={{ base: imageSize, lg: '500px' }}
+              maxW={{ base: imageSize, lg: "500px" }}
+              maxH={{ base: imageSize, lg: "500px" }}
             >
               <Image
-                src={isLargerThan900 ? "https://avatars.githubusercontent.com/u/59417077?s=500&v=4" : ""}
+                src={
+                  isLargerThan900
+                    ? "https://avatars.githubusercontent.com/u/59417077?s=500&v=4"
+                    : ""
+                }
                 w="100%"
                 h="100%"
-                maxW={{ base: imageSize, lg: '500px' }}
-                maxH={{ base: imageSize, lg: '500px' }}
+                maxW={{ base: imageSize, lg: "500px" }}
+                maxH={{ base: imageSize, lg: "500px" }}
                 borderRadius="50"
-                alt={isLargerThan900 ? "tyger796" : ""}
+                alt={isLargerThan900 ? "tygerxqt" : ""}
                 pos="intrinsic"
               />
             </Box>
@@ -164,5 +166,5 @@ export default function Introduction() {
         </SlideFade>
       </SimpleGrid>
     </>
-  )
+  );
 }
