@@ -1,0 +1,9 @@
+module.exports = {
+  images: {
+<<<<<<< Updated upstream
+    domains: ['i.imgur.com', 'images.unsplash.com', 'media.giphy.com'],
+=======
+    domains: ['i.imgur.com', 'images.unsplash.com', 'media.giphy.com', 'images.ctfassets.net', 'images.contentful.com'],
+>>>>>>> Stashed changes
+  },
+}

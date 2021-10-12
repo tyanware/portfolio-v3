@@ -14,7 +14,10 @@ import {
   DrawerHeader,
   DrawerBody,
   Stack,
-  Icon
+  Icon,
+  Alert,
+  AlertDescription,
+  AlertTitle,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import useMediaQuery from "../hook/useMediaQuery";
@@ -36,6 +39,21 @@ export default function Navbar({ enableTransition }) {
   }
 
   const pageName = "~/tyger" + pageURL;
+
+  const banner = (
+    <Slide direction="top" reverse in={true} transition={{ duration: 0.5, delay: 0.01 }}>
+      <Box paddingTop="72px">
+        <Alert justifyContent="space-between" status="info">
+          <AlertTitle ml={5}>I've got a new name!</AlertTitle>
+          <AlertDescription>
+            <Button mr={5} as="a" href="https://tygr.dev/blog/username-migration">
+              Learn more -&gt;
+            </Button>
+          </AlertDescription>
+        </Alert>
+      </Box>
+    </Slide>
+  )
 
   const NavbarDrawer = () => (
     <>
@@ -85,29 +103,20 @@ export default function Navbar({ enableTransition }) {
   );
 
   return (
-    <Box zIndex="99">
-      <Slide
-        direction="top"
-        reverse
-        in={true}
-        transition={
-          enableTransition
-            ? { enter: { duration: 0.5, delay: 0.01 } }
-            : { enter: { duration: 0, delay: 0 } }
-        }
-        background="black"
-      >
-        <Flex
-          as="nav"
-          flexDirection="row"
-          justifyContent="space-between"
-          alignItems="center"
-          width="100%"
-          px="3vw"
-          py="3"
-          borderBottom="0.5px solid #1e2029"
+    <>
+      <Box zIndex="99">
+        <Slide
+          direction="top"
+          reverse
+          in={true}
+          transition={
+            enableTransition
+              ? { enter: { duration: 0.5, delay: 0.01 } }
+              : { enter: { duration: 0, delay: 0 } }
+          }
           background="black"
         >
+<<<<<<< Updated upstream
           <NextLink href="/" passHref>
             <Text
               cursor="pointer"
@@ -141,17 +150,65 @@ export default function Navbar({ enableTransition }) {
                 </Button>
               </NextLink>
               {/* <NextLink href="/account" passHref>
+=======
+          <Flex
+            as="nav"
+            flexDirection="row"
+            justifyContent="space-between"
+            alignItems="center"
+            width="100%"
+            px="3vw"
+            py="3"
+            borderBottom="0.5px solid #1e2029"
+            background="black"
+          >
+            <NextLink href="/" passHref>
+              <Text
+                cursor="pointer"
+                color="displayColor"
+                fontWeight="bold"
+                fontSize="32px"
+              >
+                {pageName}
+              </Text>
+            </NextLink>
+            {isLargerThan768 ? (
+              <Box color="textSecondary">
+                <NextLink href="/" passHref>
+                  <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                    Home
+                  </Button>
+                </NextLink>
+                <NextLink href="/projects" passHref>
+                  <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                    Projects
+                  </Button>
+                </NextLink>
+                {/* <NextLink href="/photography" passHref>
+                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                  Photography
+                </Button>
+              </NextLink> */}
+                <NextLink href="/blog" passHref>
+                  <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                    Blog
+                  </Button>
+                </NextLink>
+                {/* <NextLink href="/account" passHref>
+>>>>>>> Stashed changes
                 <Button as="a" variant="solid" colorScheme="blue" p="4" ml="3vw" fontSize="16px">
                   Account
                 </Button>
               </NextLink>{" "} */}
-            </Box>
-          ) : (
-            <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />
-          )}
-        </Flex>
-      </Slide>
-      <NavbarDrawer />
-    </Box>
+              </Box>
+            ) : (
+              <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />
+            )}
+          </Flex>
+        </Slide>
+        {router.asPath === "/" ? banner : <div /> }
+        <NavbarDrawer />
+      </Box>
+    </>
   );
 }

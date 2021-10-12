@@ -9,16 +9,15 @@ import {
   Image,
   SimpleGrid,
   Flex,
-  position,
-} from '@chakra-ui/react'
-import { FaEnvelope, FaGithub, FaDiscord } from 'react-icons/fa'
-import useMediaQuery from '../hook/useMediaQuery'
+} from "@chakra-ui/react";
+import { FaEnvelope, FaGithub, FaDiscord } from "react-icons/fa";
+import useMediaQuery from "../hook/useMediaQuery";
 
 export default function Introduction() {
-  const isLargerThan800 = useMediaQuery(800)
-  const isLargerThan900 = useMediaQuery(900)
-  const isLargerThan1200 = useMediaQuery(1200)
-  let imageSize = isLargerThan1200 ? '500px' : '250px'
+  const isLargerThan800 = useMediaQuery(800);
+  const isLargerThan900 = useMediaQuery(900);
+  const isLargerThan1200 = useMediaQuery(1200);
+  let imageSize = isLargerThan800 ? "500px" : "300px";
   return (
     <>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
@@ -52,10 +51,8 @@ export default function Introduction() {
             <Heading
               color="textPrimary"
               fontSize="display"
-              lineHeight={'95%'}
-              fontSize="display"
-              color="displayColor"
-              letterSpacing={{ sm: '-1.2px', md: '-1.8px' }}
+              lineHeight={"95%"}
+              letterSpacing={{ sm: "-1.2px", md: "-1.8px" }}
               position="relative"
               zIndex={1}
             >
@@ -142,7 +139,12 @@ export default function Introduction() {
           in={true}
           transition={{ enter: { duration: 0.4, delay: 1.2 } }}
         >
-          <Flex marginLeft="100" alignItems="normal" justifyContent="center" position="relative">
+          <Flex
+            marginLeft={{ base: 100, lg: 200 }}
+            alignItems="normal"
+            justifyContent="center"
+            position="relative"
+          >
             <Box
               maxW={{ base: imageSize, lg: '500px' }}
               maxH={{ base: imageSize, lg: '500px' }}

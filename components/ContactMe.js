@@ -1,7 +1,14 @@
-import { Link, Button, chakra, Heading, Stack, Text } from '@chakra-ui/react'
-import useMediaQuery from '../hook/useMediaQuery'
-import { FaDiscord, FaGithub, FaInstagram, FaTwitch, FaTwitter, FaYoutube, FaWindowMaximize } from 'react-icons/fa'
-import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
+import { Link, Button, chakra, Heading, Stack, Text } from "@chakra-ui/react";
+import useMediaQuery from "../hook/useMediaQuery";
+import {
+  FaDiscord,
+  FaGithub,
+  FaInstagram,
+  FaTwitch,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
+import SlideUpWhenVisible from "../hook/SlideUpWhenVisible";
 
 export default function ContactMe() {
   const isLargerThan800 = useMediaQuery(800)
@@ -129,5 +136,6 @@ export default function ContactMe() {
         </Stack>
       </Stack>
     </>
-  )
+  );
 }
+

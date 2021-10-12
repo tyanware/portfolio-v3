@@ -13,6 +13,7 @@ import {
 import useMediaQuery from '../hook/useMediaQuery'
 import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
 
+
 export default function AboutMe() {
   const isLargerThan800 = useMediaQuery(800)
   const isLargerThan1200 = useMediaQuery(1200)
