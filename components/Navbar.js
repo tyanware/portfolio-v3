@@ -116,6 +116,17 @@ export default function Navbar({ enableTransition }) {
           }
           background="black"
         >
+        <Flex
+            as="nav"
+            flexDirection="row"
+            justifyContent="space-between"
+            alignItems="center"
+            width="100%"
+            px="3vw"
+            py="3"
+            borderBottom="0.5px solid #1e2029"
+            background="black"
+          >
           <NextLink href="/" passHref>
             <Text
               cursor="pointer"
@@ -157,6 +168,7 @@ export default function Navbar({ enableTransition }) {
             ) : (
               <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />
             )}
+            </Flex>
           </Slide>
         <NavbarDrawer />
         {router.asPath === "/" ? banner : <div />}

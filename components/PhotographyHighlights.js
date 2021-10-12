@@ -44,7 +44,7 @@ export default function PhotographyHighlights({ photos }) {
                         <Text fontSize={{ base: 'md', md: 'xl' }} color="textSecondary">
                             Here's some of my projects that I have worked on.
                         </Text>
-                        {/* <NextLink href="/photography">
+                        <NextLink href="/photography">
                             <Link>
                                 <Text
                                     display={{ base: 'none', md: 'block' }}
@@ -53,7 +53,7 @@ export default function PhotographyHighlights({ photos }) {
                                     Explore more &rarr;
                                 </Text>
                             </Link>
-                        </NextLink> */}
+                        </NextLink>
                     </Stack>
                 </SlideUpWhenVisible>
                 <SimpleGrid columns={{ sm: 1, md: 2 }} spacing={16}>
@@ -66,7 +66,6 @@ export default function PhotographyHighlights({ photos }) {
                         <Box>
                             <Cards
                                 imageURL={'https:' + photos[1].fields.image.fields.file.url}
-
                             />
                         </Box>
                     </SlideUpWhenVisible>
@@ -79,7 +78,6 @@ export default function PhotographyHighlights({ photos }) {
                         <Box>
                             <Cards
                                 imageURL={'https:' + photos[3].fields.image.fields.file.url}
-
                             />
                         </Box>
                     </SlideUpWhenVisible>

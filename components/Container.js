@@ -11,14 +11,7 @@ const Container = ({ enableTransition, children }) => {
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
-          Designed and Developed by{" "}
-          <Link
-            href="https://www.instagram.com/tygerxqt"
-            fontWeight="semibold"
-            color="button1"
-          >
-            @tygerxqt
-          </Link>
+          Designed and Developed by @tygerxqt
           <br />
           Profile Picture by{" "}
           <Link
