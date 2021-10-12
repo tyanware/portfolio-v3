@@ -116,7 +116,6 @@ export default function Navbar({ enableTransition }) {
           }
           background="black"
         >
-<<<<<<< Updated upstream
           <NextLink href="/" passHref>
             <Text
               cursor="pointer"
@@ -150,52 +149,6 @@ export default function Navbar({ enableTransition }) {
                 </Button>
               </NextLink>
               {/* <NextLink href="/account" passHref>
-=======
-          <Flex
-            as="nav"
-            flexDirection="row"
-            justifyContent="space-between"
-            alignItems="center"
-            width="100%"
-            px="3vw"
-            py="3"
-            borderBottom="0.5px solid #1e2029"
-            background="black"
-          >
-            <NextLink href="/" passHref>
-              <Text
-                cursor="pointer"
-                color="displayColor"
-                fontWeight="bold"
-                fontSize="32px"
-              >
-                {pageName}
-              </Text>
-            </NextLink>
-            {isLargerThan768 ? (
-              <Box color="textSecondary">
-                <NextLink href="/" passHref>
-                  <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
-                    Home
-                  </Button>
-                </NextLink>
-                <NextLink href="/projects" passHref>
-                  <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
-                    Projects
-                  </Button>
-                </NextLink>
-                {/* <NextLink href="/photography" passHref>
-                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
-                  Photography
-                </Button>
-              </NextLink> */}
-                <NextLink href="/blog" passHref>
-                  <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
-                    Blog
-                  </Button>
-                </NextLink>
-                {/* <NextLink href="/account" passHref>
->>>>>>> Stashed changes
                 <Button as="a" variant="solid" colorScheme="blue" p="4" ml="3vw" fontSize="16px">
                   Account
                 </Button>
@@ -204,10 +157,9 @@ export default function Navbar({ enableTransition }) {
             ) : (
               <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />
             )}
-          </Flex>
-        </Slide>
-        {router.asPath === "/" ? banner : <div /> }
+          </Slide>
         <NavbarDrawer />
+        {router.asPath === "/" ? banner : <div />}
       </Box>
     </>
   );
