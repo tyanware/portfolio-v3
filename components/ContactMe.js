@@ -92,10 +92,8 @@ export default function ContactMe() {
           </SlideUpWhenVisible>
           <SlideUpWhenVisible>
             <Stack isInline spacing={4}>
-              <Link
-                href="https://www.twitter.com/tyger796"
-                isExternal
-              >
+
+              <Link href="https://www.twitter.com/tygerxqt" isExternal>
                 <Button
                   leftIcon={<FaTwitter fill="#81A1C1" />}
                   position="static"
