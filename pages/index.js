@@ -48,7 +48,7 @@ export default function Index({ projects, photos }) {
           justifyContent="center"
           alignItems="flex-start"
           px={{ base: "5vw", md: "10vw" }}
-          mt={{ base: "15vh", md: "22.5vh" }}
+          mt={{ base: "20vh", md: "33.75vh" }}
         >
           <Introduction />
           <AboutMe />
