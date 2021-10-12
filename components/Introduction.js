@@ -35,7 +35,6 @@ export default function Introduction() {
                 position="absolute"
                 top={{ base: "0", md: "-15" }}
                 left={{ base: "-5", md: "-10" }}
-                zIndex={0}
                 alt=""
               ></Image>
               <Text
@@ -43,7 +42,6 @@ export default function Introduction() {
                 fontSize="display2"
                 fontWeight="medium"
                 position="relative"
-                zIndex={1}
               >
                 Hey there!, I'm-
               </Text>
@@ -54,7 +52,6 @@ export default function Introduction() {
               lineHeight={"95%"}
               letterSpacing={{ sm: "-1.2px", md: "-1.8px" }}
               position="relative"
-              zIndex={1}
             >
               tygerxqt.
             </Heading>

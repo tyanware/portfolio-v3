@@ -18,6 +18,7 @@ import {
   Alert,
   AlertDescription,
   AlertTitle,
+  AlertIcon
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import useMediaQuery from "../hook/useMediaQuery";
@@ -40,19 +41,28 @@ export default function Navbar({ enableTransition }) {
 
   const pageName = "~/tyger" + pageURL;
 
+  const bannerTitle = (
+    <>
+
+    </>
+  )
+
   const banner = (
-    <Slide direction="top" reverse in={true} transition={{ duration: 0.5, delay: 0.01 }}>
-      <Box paddingTop="72px">
-        <Alert justifyContent="space-between" status="info">
-          <AlertTitle ml={5}>I've got a new name!</AlertTitle>
-          <AlertDescription>
-            <Button mr={5} as="a" href="https://tygr.dev/blog/username-migration">
-              Learn more -&gt;
-            </Button>
-          </AlertDescription>
-        </Alert>
-      </Box>
-    </Slide>
+    <Box zIndex="99">
+      <Slide direction="top" reverse in={true} transition={{ duration: 0.5, delay: 0.01 }}>
+        <Box paddingTop="72px">
+          <Alert variant="solid" status="warning">
+          <AlertIcon ml={7} />
+          <AlertTitle>I've got a new username!</AlertTitle>
+            <AlertDescription>
+              <Button ml={1500} as="a" href="https://tygr.dev/blog/username-migration">
+                Learn more -&gt;
+              </Button>
+            </AlertDescription>
+          </Alert>
+        </Box>
+      </Slide>
+    </Box>
   )
 
   const NavbarDrawer = () => (
@@ -80,11 +90,11 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </NextLink>
-              {/* <NextLink href="/photography" passHref>
+              <NextLink href="/photography" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Photography
                 </Button>
-              </NextLink> */}
+              </NextLink>
               <NextLink href="/blog" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Blog
@@ -104,7 +114,7 @@ export default function Navbar({ enableTransition }) {
 
   return (
     <>
-      <Box zIndex="99">
+      <Box zIndex="98">
         <Slide
           direction="top"
           reverse
@@ -171,8 +181,8 @@ export default function Navbar({ enableTransition }) {
             </Flex>
           </Slide>
         <NavbarDrawer />
-        {router.asPath === "/" ? banner : <div />}
       </Box>
+      {router.asPath === "/" ? banner : <div />}
     </>
   );
 }
