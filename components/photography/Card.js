@@ -6,15 +6,12 @@ export default function Cards({ imageURL }) {
         <Stack
             bg="secondary"
             borderRadius="10px"
-            minH="320px"
-            maxH="500px"
-            border="1px"
-            borderColor={{ base: '#333', md: 'borderColor' }}
         >
             <ScaleFade in={true} transition={{ duration: 1 }}>
                 <Image
                     width={6016}
                     height={4000}
+                    placeholder="blur"
                     w="auto"
                     h="auto"
                     src={imageURL}

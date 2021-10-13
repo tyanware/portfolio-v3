@@ -8,26 +8,24 @@ import {
   PopoverTrigger,
   PopoverContent,
   PopoverBody,
-  PopoverArrow,
-} from '@chakra-ui/react'
-import useMediaQuery from '../hook/useMediaQuery'
-import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
+  PopoverArrow
+} from "@chakra-ui/react";
+import useMediaQuery from "../hook/useMediaQuery";
+import SlideUpWhenVisible from "../hook/SlideUpWhenVisible";
+
 
 export default function AboutMe() {
-  const isLargerThan800 = useMediaQuery(800)
-  const isLargerThan1200 = useMediaQuery(1200)
+  const isLargerThan800 = useMediaQuery(800);
+  const isLargerThan1200 = useMediaQuery(1200);
 
   const MoreInfo = ({ text, content }) => {
     return (
       <>
-        {' '}
+        {" "}
         {isLargerThan800 ? (
           <Popover trigger="hover" placement="right">
             <PopoverTrigger>
-              <chakra.span
-                color="button1"
-                cursor="help"
-              >
+              <chakra.span color="button1" cursor="help">
                 {text}
               </chakra.span>
             </PopoverTrigger>
@@ -42,10 +40,10 @@ export default function AboutMe() {
           <Text as="span" color="button1">
             {text}
           </Text>
-        )}{' '}
+        )}{" "}
       </>
-    )
-  }
+    );
+  };
 
   return (
     <>
@@ -57,11 +55,11 @@ export default function AboutMe() {
             </Heading>
             <Text
               color="textSecondary"
-              fontSize={{ base: '14px', md: '16px' }}
+              fontSize={{ base: "14px", md: "16px" }}
               whiteSpace="pre-line"
             >
-              Hi! I'm tyger, I've been close to a computer since an
-              early age, and been passionate about it ever since. <br />
+              Hi! I'm tygerxqt, I've been close to a computer since an early
+              age, and been passionate about it ever since. <br />
               <br />
               I really liked to build stuff using
               <MoreInfo
@@ -69,7 +67,7 @@ export default function AboutMe() {
                 content="I used to make games without code using Scratch, and build simple websites with Wix back in primary school."
               />
               back in 2013, and from that, I self-taught myself how to code.
-              Fast-forward to today, I program in various languages like {' '}
+              Fast-forward to today, I program in various languages like{" "}
               <MoreInfo
                 text="JavaScript,"
                 content="JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat."
@@ -82,10 +80,10 @@ export default function AboutMe() {
               <MoreInfo
                 text="Python."
                 content="Python is an interpreted high-level general-purpose programming language."
-              /> 
+              />
               <br />
-              I'm interested in building something helpful and
-              automate tasks with code, currently focused on
+              I'm interested in building something helpful and automate tasks
+              with code, currently focused on
               <MoreInfo
                 text="Web Development,"
                 content="Building web-apps using Javascript Frameworks (React.js and Next.js)"
@@ -97,8 +95,9 @@ export default function AboutMe() {
               and I anticipate entering the game development area soon as well!
               <br />
               <br />
-              When I'm not working on projects, I play video games,
-              watch some anime, or if the weather's good, I go out on a bike ride with my friends!
+              When I'm not working on projects, I play video games, watch some
+              anime, or if the weather's good, I go out on a bike ride with my
+              friends!
             </Text>
           </Stack>
         </SlideUpWhenVisible>
@@ -114,6 +113,7 @@ export default function AboutMe() {
                 maxW={{ base: '300px', lg: '350px' }}
                 maxH={{ base: '300px', lg: '350px' }}
                 borderRadius="50"
+                placeholder="blur"
                 alt="tyger796"
               />
             </Box>
@@ -121,5 +121,5 @@ export default function AboutMe() {
         </SlideUpWhenVisible> */}
       </SimpleGrid>
     </>
-  )
+  );
 }

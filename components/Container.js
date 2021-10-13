@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import { Flex, Stack, Text, Link } from '@chakra-ui/react'
-import Navbar from './Navbar'
+import React, { useEffect } from "react";
+import { Flex, Stack, Text, Link } from "@chakra-ui/react";
+import Navbar from "./Navbar";
 
 const Container = ({ enableTransition, children }) => {
   return (
@@ -11,7 +11,16 @@ const Container = ({ enableTransition, children }) => {
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
-          Designed and Developed by tyger796.
+          Designed and Developed by @tygerxqt
+          <br />
+          Profile Picture by{" "}
+          <Link
+            href="https://www.instagram.com/klxrka/"
+            fontWeight="semibold"
+            color="button1"
+          >
+            @klxrka 
+          </Link>
           <br />
           Built with{" "}
           <Link
@@ -41,7 +50,7 @@ const Container = ({ enableTransition, children }) => {
         </Text>
       </Stack>
     </>
-  )
-}
+  );
+};
 
-export default Container
+export default Container;
