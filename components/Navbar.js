@@ -48,14 +48,14 @@ export default function Navbar({ enableTransition }) {
   )
 
   const banner = (
-    <Box zIndex="99">
+    <Box zIndex="98">
       <Slide direction="top" reverse in={true} transition={{ duration: 0.5, delay: 0.01 }}>
         <Box paddingTop="72px">
           <Alert variant="solid" status="warning">
           <AlertIcon ml={7} />
           <AlertTitle>I've got a new username!</AlertTitle>
             <AlertDescription>
-              <Button ml={1500} as="a" href="https://tygr.dev/blog/username-migration">
+              <Button variant="solid" href="https://tygr.dev/blog/username-migration">
                 Learn more -&gt;
               </Button>
             </AlertDescription>
@@ -114,7 +114,7 @@ export default function Navbar({ enableTransition }) {
 
   return (
     <>
-      <Box zIndex="98">
+      <Box zIndex="99">
         <Slide
           direction="top"
           reverse
@@ -178,6 +178,7 @@ export default function Navbar({ enableTransition }) {
             ) : (
               <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />
             )}
+            
             </Flex>
           </Slide>
         <NavbarDrawer />
