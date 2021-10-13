@@ -11,6 +11,7 @@ export default function Cards({ imageURL }) {
                 <Image
                     width={6016}
                     height={4000}
+                    placeholder="blur"
                     w="auto"
                     h="auto"
                     src={imageURL}

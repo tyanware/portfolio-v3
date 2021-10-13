@@ -98,7 +98,10 @@ export default function Cards({
           h="auto"
           src={imageURL}
           transition="0.3s"
+          placeholder="blur"
+          _hover=""
           borderRadius="10px 10px 0px 0px"
+          placeholder="blur"
           alt="project image"
         ></Image>
         <Stack px={4} py={2}>

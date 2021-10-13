@@ -30,6 +30,7 @@ export default function Introduction() {
             <Box position="relative">
               <Image
                 src="https://svgsilh.com/svg/26432.svg"
+                placeholder="blur"
                 filter="invert(0.1)"
                 w={{ base: "70px", md: "150px" }}
                 position="absolute"
@@ -152,6 +153,7 @@ export default function Introduction() {
                 }
                 w="100%"
                 h="100%"
+                placeholder="blur"
                 maxW={{ base: imageSize, lg: "500px" }}
                 maxH={{ base: imageSize, lg: "500px" }}
                 borderRadius="50"

@@ -99,6 +99,7 @@ const MDXComponents = {
     <Image
       width={600}
       height={300}
+      placeholder="blur"
       layout="responsive"
       objectFit="contain"
       w="auto"

@@ -26,6 +26,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 
 export default function Navbar({ enableTransition }) {
   const isLargerThan768 = useMediaQuery(768);
+  const isLargerThan900 = useMediaQuery(900);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = useRef();
   const router = useRouter();
@@ -41,12 +42,6 @@ export default function Navbar({ enableTransition }) {
 
   const pageName = "~/tyger" + pageURL;
 
-  const bannerTitle = (
-    <>
-
-    </>
-  )
-
   const banner = (
     <Box zIndex="98">
       <Slide direction="top" reverse in={true} transition={{ duration: 0.5, delay: 0.01 }}>
@@ -55,7 +50,7 @@ export default function Navbar({ enableTransition }) {
           <AlertIcon ml={7} />
           <AlertTitle>I've got a new username!</AlertTitle>
             <AlertDescription>
-              <Button variant="solid" href="https://tygr.dev/blog/username-migration">
+              <Button as="a" variant="solid" background="#F6C776" textColor="black" href="https://tygr.dev/blog/username-migration">
                 Learn more -&gt;
               </Button>
             </AlertDescription>
@@ -159,11 +154,11 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </NextLink>
-              {/* <NextLink href="/photography" passHref>
+              <NextLink href="/photography" passHref>
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
                   Photography
                 </Button>
-              </NextLink> */}
+              </NextLink>
               <NextLink href="/blog" passHref>
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
                   Blog
@@ -183,7 +178,7 @@ export default function Navbar({ enableTransition }) {
           </Slide>
         <NavbarDrawer />
       </Box>
-      {router.asPath === "/" ? banner : <div />}
+      {router.asPath === "/" && isLargerThan900 ? banner : <div />}
     </>
   );
 }

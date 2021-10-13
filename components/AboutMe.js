@@ -113,6 +113,7 @@ export default function AboutMe() {
                 maxW={{ base: '300px', lg: '350px' }}
                 maxH={{ base: '300px', lg: '350px' }}
                 borderRadius="50"
+                placeholder="blur"
                 alt="tyger796"
               />
             </Box>

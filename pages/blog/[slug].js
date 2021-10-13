@@ -87,6 +87,7 @@ export default function Post({ metadata, source }) {
                 borderRadius="10px"
                 width={1366}
                 height={892}
+                placeholder="blur"
                 w="auto"
                 h="auto"
                 mx="auto"
