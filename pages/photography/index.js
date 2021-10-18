@@ -1,10 +1,10 @@
 import { Stack, Heading, Text, SimpleGrid, Divider } from '@chakra-ui/react'
 
-// import Cards from '../../components/photography/Card'
 import Container from '../../components/Container'
 import Head from 'next/head'
 import ReactPlayer from 'react-player'
 import useMediaQuery from '../../hook/useMediaQuery'
+import CategoryCard from '../../components/photography/CategoryCard'
 
 export default function Photography({ photos }) {
     const isLargerThan750 = useMediaQuery(750);
@@ -64,19 +64,9 @@ export default function Photography({ photos }) {
                             Here's an overview of my photos.
                         </Text>
                         <Divider />
-                        <Text>
-                            Hey! You shouldn't be here yet! GO BACK I WANT TO BE MONKEY NYOOOOM
-                        </Text>
-                        {isLargerThan750 ? (
-                            <ReactPlayer
-                                url="https://cloud.nordstudios.org/f/2c4a74121e8a4a37aff7/?dl=1"
-                                controls={true}
-                                playbackRate={2}
-                                loop={true}
-                            />
-                        ) : (
-                            <div />
-                        )}
+                        {/* <CategoryCard
+                            imageURL={}
+                        /> */}
                     </Stack>
                 </Stack>
             </Container>
@@ -96,7 +86,7 @@ export async function getStaticProps() {
     })
     return {
         props: {
-            photoOverview: data.items.reverse(),
+            photos: data.items.reverse(),
         },
     }
 }
