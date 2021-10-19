@@ -53,7 +53,7 @@ export default function Index({ projects, photos }) {
           <Introduction />
           <AboutMe />
           <FeaturedProjects projects={projects} />
-          <PhotographyHighlights photos={photos} />
+          <PhotographyHighlights />
           <ContactMe />
         </Stack>
       </Container>
@@ -72,15 +72,9 @@ export async function getStaticProps() {
     order: "fields.order"
   });
 
-  let data2 = await client.getEntries({
-    content_type: "photographyHighlights",
-    order: "sys.updatedAt"
-  });
-
   return {
     props: {
       projects: data.items,
-      photos: data2.items.reverse()
     }
   };
 }

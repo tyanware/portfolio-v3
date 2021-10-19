@@ -178,7 +178,7 @@ export default function Navbar({ enableTransition }) {
           </Slide>
         <NavbarDrawer />
       </Box>
-      {router.asPath === "/" && isLargerThan900 ? banner : <div />}
+      {/* {router.asPath === "/" && isLargerThan900 ? banner : <div />} */}
     </>
   );
 }

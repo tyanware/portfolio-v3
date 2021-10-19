@@ -4,7 +4,7 @@ import Container from '../../components/Container'
 import Head from 'next/head'
 import ReactPlayer from 'react-player'
 import useMediaQuery from '../../hook/useMediaQuery'
-import CategoryCard from '../../components/photography/CategoryCard'
+import Category from '../../components/photography/CategoryCard'
 
 export default function Photography({ photos }) {
     const isLargerThan750 = useMediaQuery(750);
@@ -64,9 +64,12 @@ export default function Photography({ photos }) {
                             Here's an overview of my photos.
                         </Text>
                         <Divider />
-                        {/* <CategoryCard
-                            imageURL={}
-                        /> */}
+                        <SimpleGrid columns={{ sm: 1, md: 2 }}>
+                            {/* <Category
+                                imageURL="https://images.ctfassets.net/ibmu74c30nyl/6BXw4039Zxd8ekNo3YL6PG/9fbc1be44e909b836952b83f260d3a38/DSC_0006.JPG"
+                                text="/nature"
+                            /> */}
+                        </SimpleGrid>
                     </Stack>
                 </Stack>
             </Container>

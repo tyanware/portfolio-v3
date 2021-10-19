@@ -4,9 +4,8 @@ import {
   Heading,
   Text,
   SimpleGrid,
-  Flex,
   Box,
-} from '@chakra-ui/layout'
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Cards from './Card'
 import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
