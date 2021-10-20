@@ -11,7 +11,15 @@ const Container = ({ enableTransition, children }) => {
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
-          Designed and Developed by @tygerxqt
+          Designed and Developed by {" "}
+          <Link
+            href="https://github.com/tygerxqt"
+            fontWeight="semibold"
+            color="button1"
+          >
+            tygerxqt
+          </Link>
+          .
           <br />
           Profile Picture by{" "}
           <Link
@@ -19,8 +27,9 @@ const Container = ({ enableTransition, children }) => {
             fontWeight="semibold"
             color="button1"
           >
-            @klxrka 
+            klxrka 
           </Link>
+          .
           <br />
           Built with{" "}
           <Link
