@@ -82,7 +82,7 @@ export default function AboutMe() {
                 content="Python is an interpreted high-level general-purpose programming language."
               />
               <br />
-              I'm interested in building something helpful and automate tasks
+              I'm interested in building something helpful and automating tasks
               with code, currently focused on
               <MoreInfo
                 text="Web Development,"
