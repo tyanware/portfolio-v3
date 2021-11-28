@@ -6,11 +6,10 @@ import {
   SimpleGrid,
   Flex,
   Box,
-} from '@chakra-ui/layout'
+} from '@chakra-ui/react'
 import NextLink from 'next/link'
 import Cards from './Card'
 import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
-import { Divider } from '@chakra-ui/react'
 
 export default function FeaturedProjects({ projects }) {
   return (

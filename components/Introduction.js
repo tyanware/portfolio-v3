@@ -16,8 +16,6 @@ import useMediaQuery from "../hook/useMediaQuery";
 export default function Introduction() {
   const isLargerThan800 = useMediaQuery(800);
   const isLargerThan900 = useMediaQuery(900);
-  const isLargerThan1200 = useMediaQuery(1200);
-  let imageSize = isLargerThan800 ? "500px" : "300px";
   return (
     <>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
@@ -136,26 +134,26 @@ export default function Introduction() {
           transition={{ enter: { duration: 0.4, delay: 1.2 } }}
         >
           <Flex
-            marginLeft={{ base: 100, lg: 200 }}
+            marginLeft={{ base: 100, md: 200, lg: 300 }}
             alignItems="normal"
             justifyContent="center"
             position="relative"
           >
             <Box
-              maxW={{ base: imageSize, lg: "500px" }}
-              maxH={{ base: imageSize, lg: "500px" }}
+              maxW={{ base: "312px", md: "452px", lg: "612px" }}
+              maxH={{ base: "312px", md: "452px", lg: "612px" }}
             >
               <Image
                 src={
                   isLargerThan900
-                    ? "https://avatars.githubusercontent.com/u/59417077?s=500&v=4"
+                    ? "https://avatars.githubusercontent.com/u/59417077?s=612&v=4"
                     : ""
                 }
                 w="100%"
                 h="100%"
                 placeholder="blur"
-                maxW={{ base: imageSize, lg: "500px" }}
-                maxH={{ base: imageSize, lg: "500px" }}
+                maxW={{ base: "312px", md: "452px", lg: "612px" }}
+                maxH={{ base: "312px", md: "452px", lg: "612px" }}
                 borderRadius="50"
                 alt={isLargerThan900 ? "tygerxqt" : ""}
                 pos="intrinsic"

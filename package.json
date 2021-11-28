@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@chakra-ui/icons": "1.0.15",
+    "@chakra-ui/layout": "^1.4.10",
     "@chakra-ui/react": "1.6.7",
+    "@chakra-ui/system": "^1.8.2",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "@supabase/supabase-js": "^1.22.6",

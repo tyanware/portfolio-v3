@@ -36,6 +36,8 @@ export default function Navbar({ enableTransition }) {
     pageURL = "/projects";
   } else if (router.asPath == "/blog") {
     pageURL = "/blog";
+  } else if (router.asPath == "/photography") {
+    pageURL = "/photos"
   } else {
     pageURL = "/";
   }
@@ -85,11 +87,11 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </NextLink>
-              {/* <NextLink href="/photography" passHref>
+              <NextLink href="/photography" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Photography
                 </Button>
-              </NextLink> */}
+              </NextLink>
               <NextLink href="/blog" passHref>
                 <Button as="a" variant="ghost" fontSize="16px">
                   Blog
@@ -154,11 +156,11 @@ export default function Navbar({ enableTransition }) {
                   Projects
                 </Button>
               </NextLink>
-              {/* <NextLink href="/photography" passHref>
+              <NextLink href="/photography" passHref>
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
                   Photography
                 </Button>
-              </NextLink> */}
+              </NextLink>
               <NextLink href="/blog" passHref>
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
                   Blog
@@ -178,7 +180,7 @@ export default function Navbar({ enableTransition }) {
           </Slide>
         <NavbarDrawer />
       </Box>
-      {router.asPath === "/" && isLargerThan900 ? banner : <div />}
+      {/* {router.asPath === "/" && isLargerThan900 ? banner : <div />} */}
     </>
   );
 }

@@ -1,13 +1,30 @@
-import { Stack, Heading, Text, SimpleGrid, Divider } from '@chakra-ui/react'
+import { Stack, Heading, Text, SimpleGrid, Divider, Center, Box, Select, RadioGroup, Radio, List, ListItem, ListIcon } from '@chakra-ui/react'
 
-// import Cards from '../../components/photography/Card'
+import Cards from '../../components/photography/Card'
 import Container from '../../components/Container'
 import Head from 'next/head'
-import ReactPlayer from 'react-player'
-import useMediaQuery from '../../hook/useMediaQuery'
+import { MdCheckCircle, IoAlertCircle } from 'react-icons/md'
 
 export default function Photography({ photos }) {
-    const isLargerThan750 = useMediaQuery(750);
+    const irl = [];
+    const glitched = [];
+
+    photos.map(x => {
+        if (x.fields.category === 'irl') {
+            x.fields.images.forEach((e) => {
+                irl.push(e.fields.file)
+            })
+        }
+    });
+
+    photos.map(x => {
+        if (x.fields.category === 'glitched') {
+            x.fields.images.forEach((e) => {
+                glitched.push(e.fields.file)
+            })
+        }
+    });
+    
     return (
         <>
             <Container>
@@ -56,29 +73,82 @@ export default function Photography({ photos }) {
                     my={['15vh', '15vh', '22.5vh', '22.5vh']}
                 >
                     <Stack spacing={5}>
-                        {' '}
+                        {" "}
                         <Heading color="displayColor" fontSize={{ base: '4xl', md: '6xl' }}>
                             Photography.
                         </Heading>
                         <Text fontSize={{ base: '14px', md: '16px' }}>
-                            Here's an overview of my photos.
+                            An overview of my photos.
                         </Text>
                         <Divider />
-                        <Text>
-                            Hey! You shouldn't be here yet! GO BACK I WANT TO BE MONKEY NYOOOOM
-                        </Text>
-                        {isLargerThan750 ? (
-                            <ReactPlayer
-                                url="https://cloud.nordstudios.org/f/2c4a74121e8a4a37aff7/?dl=1"
-                                controls={true}
-                                playbackRate={2}
-                                loop={true}
-                            />
-                        ) : (
-                            <div />
-                        )}
+
+                        <Center paddingBottom='20px' paddingTop='20px'>
+                            <Box bg='white'>
+                                <Heading size='lg' color='black'>
+                                    In real life.
+                                </Heading>
+                            </Box>
+                        </Center>
+
+                        <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 16, lg: 8 }} paddingBottom='100px'>
+                            {irl.map((x) => (
+                                <Cards
+                                    imageURL={'https:' + x.url}
+                                />
+                            ))}
+                        </SimpleGrid> 
+
+                        <Center paddingBottom='20px' paddingTop='20px'>
+                            <Box bg='white'>
+                                <Heading size='lg' color='black'>
+                                    Glitched into reality.
+                                </Heading>
+                            </Box>
+                        </Center>
+
+                        <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 16, lg: 8 }}>
+                                {glitched.map((x) => (
+                                    <Cards
+                                        imageURL={'https:' + x.url}
+                                    />
+                                ))}
+                        </SimpleGrid>
                     </Stack>
                 </Stack>
+                <Center>
+                    <Stack spacing={5} paddingBottom={20}>
+                        <Heading size='md'>
+                        All photos are available to be used freely.
+                        </Heading>
+                        <List spacing={3}>
+                            <ListItem>
+                                <ListIcon as={MdCheckCircle} color='green.500' />
+                                All photos can be downloaded and used for free
+                            </ListItem>
+                            <ListItem>
+                                <ListIcon as={MdCheckCircle} color='green.500' />
+                                Commercial and non-commercial purposes
+                            </ListItem>
+                            <ListItem>
+                                <ListIcon as={MdCheckCircle} color='green.500' />
+                                No permission needed (though attribution is appreciated!)
+                            </ListItem>
+                        </List>
+                        <Heading size="md">
+                            What is not permitted
+                        </Heading>
+                        <List spacing={3}>
+                            <ListItem>
+                                <ListIcon as={IoAlertCircle} color='red.500' />
+                                All photos can be downloaded and used for free
+                            </ListItem>
+                            <ListItem>
+                                <ListIcon as={IoAlertCircle} color='red.500' />
+                                Commercial and non-commercial purposes
+                            </ListItem>
+                        </List>
+                    </Stack>
+                </Center>
             </Container>
         </>
     )
@@ -96,7 +166,7 @@ export async function getStaticProps() {
     })
     return {
         props: {
-            photoOverview: data.items.reverse(),
+            photos: data.items.reverse(),
         },
     }
 }

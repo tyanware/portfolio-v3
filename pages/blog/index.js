@@ -4,7 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Container from "../../components/Container";
 import { FaSearch } from "react-icons/fa";
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
+import { Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import useMediaQuery from "../../hook/useMediaQuery";
 import readingTime from "reading-time";
 import dateFormat from "dateformat";

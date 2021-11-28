@@ -1,10 +1,9 @@
 import { Button } from '@chakra-ui/button'
 import { FormControl, FormLabel } from '@chakra-ui/form-control'
-import { Input } from '@chakra-ui/input'
-import { Box, Divider, Heading, SimpleGrid, Stack } from '@chakra-ui/layout'
+import { Input } from '@chakra-ui/react'
+import { Heading, SimpleGrid, Stack } from '@chakra-ui/react'
 import { useState, useEffect } from 'react'
 import { supabase } from '../util/supabaseClient'
-import { Card } from './account/Card'
 
 export default function Account({ session }) {
   const [loading, setLoading] = useState(true)
