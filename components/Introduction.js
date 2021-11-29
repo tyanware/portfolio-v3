@@ -99,6 +99,7 @@ export default function Introduction() {
                   leftIcon={<FaGithub color="#81A1C1" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
+                  bgColor="secondary"
                   color="white"
                 >
                   Github
@@ -109,17 +110,19 @@ export default function Introduction() {
                   leftIcon={<FaDiscord color="#81A1C1" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
+                  bgColor="secondary"
                   color="white"
                 >
                   Discord
                 </Button>
               </Link>
-              <Link href="mailto:hi@tygr.dev" isExternal>
+              <Link href="mailto:tygerxqt@gmail.com" isExternal>
                 <Button
                   leftIcon={<FaEnvelope fill="#81A1C1" />}
                   transition="0.3s"
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
+                  bgColor="secondary"
                   color="white"
                 >
                   Email

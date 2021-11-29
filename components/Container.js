@@ -14,13 +14,13 @@ const Container = ({ enableTransition, children }) => {
           Designed and Developed by @tygerxqt
           <br />
           Profile Picture by{" "}
-          <Link
+          {/* <Link
             href="https://www.instagram.com/klxrka/"
             fontWeight="semibold"
             color="button1"
           >
             @klxrka 
-          </Link>
+          </Link> */}
           <br />
           Built with{" "}
           <Link
