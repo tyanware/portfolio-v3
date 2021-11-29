@@ -12,8 +12,7 @@ const Container = ({ enableTransition, children }) => {
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
           Designed and Developed by @tygerxqt
-          <br />
-          Profile Picture by{" "}
+          {/* Profile Picture by{" "} */}
           {/* <Link
             href="https://www.instagram.com/klxrka/"
             fontWeight="semibold"

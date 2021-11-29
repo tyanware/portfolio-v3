@@ -3,7 +3,7 @@ import { Stack, Heading, Text, SimpleGrid, Divider, Center, Box, Select, RadioGr
 import Cards from '../../components/photography/Card'
 import Container from '../../components/Container'
 import Head from 'next/head'
-import { MdCheckCircle, IoAlertCircle } from 'react-icons/md'
+import { MdCheckCircle, IoAlertCircle } from 'react-icons'
 
 export default function Photography({ photos }) {
     const irl = [];
@@ -140,11 +140,7 @@ export default function Photography({ photos }) {
                         <List spacing={3}>
                             <ListItem>
                                 <ListIcon as={IoAlertCircle} color='red.500' />
-                                All photos can be downloaded and used for free
-                            </ListItem>
-                            <ListItem>
-                                <ListIcon as={IoAlertCircle} color='red.500' />
-                                Commercial and non-commercial purposes
+                                Photos cannot be sold without valid permission.
                             </ListItem>
                         </List>
                     </Stack>
