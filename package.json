@@ -8,13 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@chakra-ui/form-control": "^1.5.1",
     "@chakra-ui/icons": "1.0.15",
     "@chakra-ui/layout": "^1.4.10",
     "@chakra-ui/react": "1.6.7",
     "@chakra-ui/system": "^1.8.2",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
-    "@supabase/supabase-js": "^1.22.6",
     "contentful": "8.5.7",
     "cors": "2.8.5",
     "dateformat": "4.5.1",

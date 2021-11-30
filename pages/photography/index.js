@@ -1,14 +1,13 @@
 import { Stack, Heading, Text, SimpleGrid, Divider, Center, Box, Select, RadioGroup, Radio, List, ListItem, ListIcon } from '@chakra-ui/react'
 
-import Cards from '../../components/photography/Card'
+import Cards from '../../components/PhotographyCard'
 import Container from '../../components/Container'
 import Head from 'next/head'
 import { MdCheckCircle } from 'react-icons/md'
-import { IoAlertCircle } from 'react-icons/io'
 
 export default function Photography({ photos }) {
     const irl = [];
-    const glitched = [];
+    const glitch = [];
 
     photos.map(x => {
         if (x.fields.category === 'irl') {
@@ -19,9 +18,9 @@ export default function Photography({ photos }) {
     });
 
     photos.map(x => {
-        if (x.fields.category === 'glitched') {
+        if (x.fields.category === 'glitch') {
             x.fields.images.forEach((e) => {
-                glitched.push(e.fields.file)
+                glitch.push(e.fields.file)
             })
         }
     });
@@ -97,22 +96,22 @@ export default function Photography({ photos }) {
                                     imageURL={'https:' + x.url}
                                 />
                             ))}
-                        </SimpleGrid> 
+                        </SimpleGrid>
 
                         <Center paddingBottom='20px' paddingTop='20px'>
                             <Box bg='white'>
                                 <Heading size='lg' color='black'>
-                                    Glitched into reality.
+                                    Glitched into Reality.
                                 </Heading>
                             </Box>
                         </Center>
 
-                        <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 16, lg: 8 }}>
-                                {glitched.map((x) => (
-                                    <Cards
-                                        imageURL={'https:' + x.url}
-                                    />
-                                ))}
+                        <SimpleGrid columns={{ base: 1, lg: 3 }} spacing={{ base: 16, lg: 8 }} paddingBottom='100px'>
+                            {glitch.map((x) => (
+                                <Cards
+                                    imageURL={'https:' + x.url}
+                                />
+                            ))}
                         </SimpleGrid>
                     </Stack>
                 </Stack>
@@ -133,15 +132,6 @@ export default function Photography({ photos }) {
                             <ListItem>
                                 <ListIcon as={MdCheckCircle} color='green.500' />
                                 No permission needed (though attribution is appreciated!)
-                            </ListItem>
-                        </List>
-                        <Heading size="md">
-                            What is not permitted
-                        </Heading>
-                        <List spacing={3}>
-                            <ListItem>
-                                <ListIcon as={IoAlertCircle} color='red.500' />
-                                Photos cannot be sold without valid permission.
                             </ListItem>
                         </List>
                     </Stack>

@@ -7,7 +7,7 @@ import {
     Box,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
-import Cards from './photography/Card'
+import Cards from './PhotographyCard'
 import SlideUpWhenVisible from '../hook/SlideUpWhenVisible'
 
 export default function PhotographyHighlights({ photos }) {
