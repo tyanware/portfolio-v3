@@ -49,7 +49,7 @@ export default function ContactMe() {
             <Stack isInline spacing={4}>
               <Link href="https://github.com/tygerxqt" isExternal>
                 <Button
-                  leftIcon={<FaGithub fill="#81A1C1" />}
+                  leftIcon={<FaGithub fill="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
@@ -62,7 +62,7 @@ export default function ContactMe() {
                 isExternal
               >
                 <Button
-                  leftIcon={<FaDiscord fill="#81A1C1" />}
+                  leftIcon={<FaDiscord fill="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
@@ -72,7 +72,7 @@ export default function ContactMe() {
               </Link>
               <Link href="https://www.instagram.com/tygerxqt" isExternal>
                 <Button
-                  leftIcon={<FaInstagram fill="#81A1C1" />}
+                  leftIcon={<FaInstagram fill="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
@@ -86,7 +86,7 @@ export default function ContactMe() {
             <Stack isInline spacing={4}>
               <Link href="https://www.twitter.com/tygerxqt" isExternal>
                 <Button
-                  leftIcon={<FaTwitter fill="#81A1C1" />}
+                  leftIcon={<FaTwitter fill="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
@@ -99,7 +99,7 @@ export default function ContactMe() {
                 isExternal
               >
                 <Button
-                  leftIcon={<FaYoutube fill="#81A1C1" />}
+                  leftIcon={<FaYoutube fill="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
@@ -109,7 +109,7 @@ export default function ContactMe() {
               </Link>
               <Link href="https://www.twitch.tv/tygerxqt" isExternal>
                 <Button
-                  leftIcon={<FaTwitch fill="#81A1C1" />}
+                  leftIcon={<FaTwitch fill="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"

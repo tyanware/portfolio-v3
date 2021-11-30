@@ -28,7 +28,7 @@ const colors = {
   displayColor: '#FFFFFF',
   textPrimary: '#D1D5DB',
   textSecondary: '#8F9094',
-  button1: '#5E81AC',
+  button1: '#F8C8DC',
   button2: '#5E81AC',
   button3: '#A3BE8C',
   borderColor: '#111111',
@@ -50,7 +50,7 @@ const breakpoints = createBreakpoints({
 
 const Link = {
   baseStyle: {
-    color: '#81A1C1',
+    color: '#F8C8DC',
     _hover: { color: '#5E81AC', textDecoration: 'none' },
   },
 }

@@ -96,7 +96,7 @@ export default function Introduction() {
             <Stack isInline spacing={4}>
               <Link href="https://github.com/tygerxqt" isExternal>
                 <Button
-                  leftIcon={<FaGithub color="#81A1C1" />}
+                  leftIcon={<FaGithub color="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   bgColor="secondary"
@@ -107,7 +107,7 @@ export default function Introduction() {
               </Link>
               <Link href="https://dsc.gg/tyger" isExternal>
                 <Button
-                  leftIcon={<FaDiscord color="#81A1C1" />}
+                  leftIcon={<FaDiscord color="#F8C8DC" />}
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   bgColor="secondary"
@@ -118,7 +118,7 @@ export default function Introduction() {
               </Link>
               <Link href="mailto:tygerxqt@gmail.com" isExternal>
                 <Button
-                  leftIcon={<FaEnvelope fill="#81A1C1" />}
+                  leftIcon={<FaEnvelope fill="#F8C8DC" />}
                   transition="0.3s"
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
