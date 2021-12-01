@@ -101,6 +101,7 @@ export default function Introduction() {
                   size={isLargerThan800 ? "md" : "sm"}
                   bgColor="secondary"
                   color="white"
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   Github
                 </Button>
@@ -112,6 +113,7 @@ export default function Introduction() {
                   size={isLargerThan800 ? "md" : "sm"}
                   bgColor="secondary"
                   color="white"
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   Discord
                 </Button>
@@ -124,6 +126,7 @@ export default function Introduction() {
                   size={isLargerThan800 ? "md" : "sm"}
                   bgColor="secondary"
                   color="white"
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   Email
                 </Button>

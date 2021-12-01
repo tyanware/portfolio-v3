@@ -93,30 +93,25 @@ export default function Navbar({ enableTransition }) {
           <DrawerBody>
             <Stack spacing="24px">
               <NextLink href="/" passHref>
-                <Button as="a" variant="ghost" fontSize="16px">
+                <Button as="a" variant="ghost" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Home
                 </Button>
               </NextLink>
               <NextLink href="/projects" passHref>
-                <Button as="a" variant="ghost" fontSize="16px">
+                <Button as="a" variant="ghost" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Projects
                 </Button>
               </NextLink>
               <NextLink href="/photography" passHref>
-                <Button as="a" variant="ghost" fontSize="16px">
+                <Button as="a" variant="ghost" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Photography
                 </Button>
               </NextLink>
               <NextLink href="/blog" passHref>
-                <Button as="a" variant="ghost" fontSize="16px">
+                <Button as="a" variant="ghost" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Blog
                 </Button>
               </NextLink>
-              {/* <NextLink href="/account" passHref>
-                <Button as="a" variant="solid" colorScheme='blue' fontSize="16px">
-                  Account
-                </Button>
-              </NextLink> */}
             </Stack>
           </DrawerBody>
         </DrawerContent>
@@ -155,30 +150,25 @@ export default function Navbar({ enableTransition }) {
           {isLargerThan768 ? (
             <Box color="textPrimary">
               <NextLink href="/" passHref>
-                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Home
                 </Button>
               </NextLink>
               <NextLink href="/projects" passHref>
-                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Projects
                 </Button>
               </NextLink>
               <NextLink href="/photography" passHref>
-                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Photography
                 </Button>
               </NextLink>
               <NextLink href="/blog" passHref>
-                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px">
+                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Blog
                 </Button>
               </NextLink>
-              {/* <NextLink href="/account" passHref>
-                <Button as="a" variant="solid" colorScheme="blue" p="4" ml="3vw" fontSize="16px">
-                  Account
-                </Button>
-              </NextLink>{" "} */}
               </Box>
             ) : (
               <Icon as={AiOutlineMenu} w={7} h={7} onClick={onOpen} />

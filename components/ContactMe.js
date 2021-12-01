@@ -53,6 +53,8 @@ export default function ContactMe() {
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
+                  backgroundColor='#1B1B1B'
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   GitHub
                 </Button>
@@ -66,6 +68,8 @@ export default function ContactMe() {
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
+                  backgroundColor='#1B1B1B'
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   Discord
                 </Button>
@@ -76,6 +80,8 @@ export default function ContactMe() {
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
+                  backgroundColor='#1B1B1B'
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   Instagram
                 </Button>
@@ -90,6 +96,8 @@ export default function ContactMe() {
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
+                  backgroundColor='#1B1B1B'
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   Twitter
                 </Button>
@@ -103,6 +111,8 @@ export default function ContactMe() {
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
+                  backgroundColor='#1B1B1B'
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   YouTube
                 </Button>
@@ -113,6 +123,8 @@ export default function ContactMe() {
                   position="static"
                   size={isLargerThan800 ? "md" : "sm"}
                   color="white"
+                  backgroundColor='#1B1B1B'
+                  _hover={{ backgroundColor: '#292929' }}
                 >
                   Twitch
                 </Button>

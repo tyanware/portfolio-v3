@@ -12,7 +12,6 @@ import {
   FaPython,
   FaJs,
   FaSass,
-  FaCode,
   FaGithub,
   FaExternalLinkAlt,
   FaDiscord,
@@ -22,6 +21,7 @@ import {
   SiCsharp,
   SiNextDotJs,
   SiCss3,
+  SiTypescript
 } from 'react-icons/si'
 import useMediaQuery from '../hook/useMediaQuery'
 
@@ -61,9 +61,9 @@ export default function Cards({
     } else if (tag == 'NextJS') {
       values[0] = 'blue'
       values[1] = SiNextDotJs
-    } else {
-      values[0] = 'gray'
-      values[1] = FaCode
+    } else if (tag == 'TypeScript') {
+      values[0] = 'blue'
+      values[1] = SiTypescript
     }
     return values
   }

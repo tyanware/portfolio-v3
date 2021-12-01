@@ -11,7 +11,7 @@ const Container = ({ enableTransition, children }) => {
       </Flex>
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
-          Designed and Developed by @tygerxqt
+          Designed and Developed by tygerxqt.
           {/* Profile Picture by{" "} */}
           {/* <Link
             href="https://www.instagram.com/klxrka/"
