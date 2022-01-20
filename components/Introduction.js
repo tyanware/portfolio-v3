@@ -11,6 +11,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { FaEnvelope, FaGithub, FaDiscord } from "react-icons/fa";
+import { AiFillInfoCircle } from "react-icons/ai";
 import useMediaQuery from "../hook/useMediaQuery";
 
 export default function Introduction() {
@@ -46,7 +47,7 @@ export default function Introduction() {
               </Text>
             </Box>
             <Heading
-              color="textPrimary"
+              color="displayColor"
               fontSize="display"
               lineHeight={"95%"}
               letterSpacing={{ sm: "-1.2px", md: "-1.8px" }}
@@ -131,6 +132,19 @@ export default function Introduction() {
                   Email
                 </Button>
               </Link>
+              <Link href="/blog/an-update">
+                <Button
+                  leftIcon={<AiFillInfoCircle fill="#F8C8DC" />}
+                  transition="0.3s"
+                  position="static"
+                  size={isLargerThan800 ? "md" : "sm"}
+                  bgColor="secondary"
+                  color="white"
+                  _hover={{ backgroundColor: '#292929' }}
+                >
+                  An Update
+                </Button>
+              </Link>
             </Stack>
           </SlideFade>
         </Stack>
@@ -152,7 +166,7 @@ export default function Introduction() {
               <Image
                 src={
                   isLargerThan900
-                    ? "https://avatars.githubusercontent.com/u/59417077?s=612&v=4"
+                    ? "https://i.imgur.com/7kNnaBE.png"
                     : ""
                 }
                 w="100%"
@@ -160,7 +174,6 @@ export default function Introduction() {
                 placeholder="blur"
                 maxW={{ base: "312px", md: "452px", lg: "612px" }}
                 maxH={{ base: "312px", md: "452px", lg: "612px" }}
-                borderRadius="50"
                 alt={isLargerThan900 ? "tygerxqt" : ""}
                 pos="intrinsic"
               />

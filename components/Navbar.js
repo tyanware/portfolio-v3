@@ -19,7 +19,8 @@ import {
   AlertDescription,
   AlertTitle,
   AlertIcon,
-  Image
+  Image,
+  Heading
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import useMediaQuery from "../hook/useMediaQuery";
@@ -29,53 +30,6 @@ export default function Navbar({ enableTransition }) {
   const isLargerThan768 = useMediaQuery(768);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = useRef();
-  var navURL = "";
-  var navNum = Math.floor(Math.random() * 8);
-
-  switch (navNum) {
-    case 0:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/4Nr4zKNW7ugkW6IUiwcMUv/306fb05b728afb2d66c545f0f06f63cb/1.gif";
-      break;
-    case 1:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/7B9RLjRPm7iaWQbApOReRX/09782ad4123a6502b766e5fba42c4e75/2.gif";
-      break;
-    case 2:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/30990L8lKVR1T3sTQXsqhh/c9eb858334c1be8bca3026d186aaeb48/3.gif";
-      break;
-    case 3:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/3xmbuPnp7uXjG1uqjSvNoM/af1256ba6fdb23edf62ec103c7aa8d97/4.gif";
-      break;
-    case 4:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/5dlQnAnVUFxkVumxSKXvHp/3476abd075d932efb9ada161f28334d3/5.gif";
-      break;
-    case 5:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/6SU2ucrLps5mUCmIg2xEjf/60b7c38dfd718ea9d55671e2f493d6e6/6.gif";
-      break;
-    case 6:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/5fIe6dlEztgOp8Z1iVBj0u/ad6ea60fb8ee900120186ee6c19b97e5/7.gif";
-      break;
-    case 7:
-      navURL = "https://images.ctfassets.net/ibmu74c30nyl/5zp7CqvzuxlGlOteRvUzwb/288b5fc211403f8d92dc73daa15dca89/8.gif";
-      break;  
-  }
-
-  const banner = (
-    <Box zIndex="98">
-      <Slide direction="top" reverse in={true} transition={{ duration: 0.5, delay: 0.01 }}>
-        <Box paddingTop="72px">
-          <Alert variant="solid" status="warning">
-          <AlertIcon ml={7} />
-          <AlertTitle>I've got a new username!</AlertTitle>
-            <AlertDescription>
-              <Button as="a" variant="solid" background="#F6C776" textColor="black" href="https://tygr.dev/blog/username-migration">
-                Learn more -&gt;
-              </Button>
-            </AlertDescription>
-          </Alert>
-        </Box>
-      </Slide>
-    </Box>
-  )
 
   const NavbarDrawer = () => (
     <>
@@ -145,7 +99,10 @@ export default function Navbar({ enableTransition }) {
             background="black"
           >
           <NextLink href="/" passHref>
-            <Image src={navURL} alt="tygr logo" width="220px" height="60px" />
+              {/* <Image src="https://i.imgur.com/ugZMXh0.png" alt="tygr logo" width="118px" height="48px" /> */}
+              <Heading as="a" fontSize="24px" fontWeight="bold" color="white">
+                tygerxqt.
+              </Heading>
           </NextLink>
           {isLargerThan768 ? (
             <Box color="textPrimary">
@@ -178,7 +135,6 @@ export default function Navbar({ enableTransition }) {
           </Slide>
         <NavbarDrawer />
       </Box>
-      {/* {router.asPath === "/" && isLargerThan900 ? banner : <div />} */}
     </>
   );
 }
