@@ -95,37 +95,12 @@ export default function Introduction() {
             transition={{ enter: { duration: 0.4, delay: 1.0 } }}
           >
             <Stack isInline spacing={4}>
-              <Link href="https://dsc.gg/tyger" isExternal>
-                <Button
-                  leftIcon={<FaDiscord color="#F8C8DC" />}
-                  position="static"
-                  size={isLargerThan800 ? "md" : "sm"}
-                  bgColor="secondary"
-                  color="white"
-                  _hover={{ backgroundColor: '#292929' }}
-                >
-                  Discord
-                </Button>
-              </Link>
-              <Link href="mailto:tygerxqt@gmail.com" isExternal>
-                <Button
-                  leftIcon={<FaEnvelope fill="#F8C8DC" />}
-                  transition="0.3s"
-                  position="static"
-                  size={isLargerThan800 ? "md" : "sm"}
-                  bgColor="secondary"
-                  color="white"
-                  _hover={{ backgroundColor: '#292929' }}
-                >
-                  Email
-                </Button>
-              </Link>
               <Link href="/blog/an-update">
                 <Button
                   leftIcon={<AiFillInfoCircle fill="#F8C8DC" />}
                   transition="0.3s"
                   position="static"
-                  size={isLargerThan800 ? "md" : "sm"}
+                  size={isLargerThan800 ? "lg" : "md"}
                   bgColor="secondary"
                   color="white"
                   _hover={{ backgroundColor: '#292929' }}
