@@ -95,18 +95,6 @@ export default function Introduction() {
             transition={{ enter: { duration: 0.4, delay: 1.0 } }}
           >
             <Stack isInline spacing={4}>
-              <Link href="https://github.com/tygerxqt" isExternal>
-                <Button
-                  leftIcon={<FaGithub color="#F8C8DC" />}
-                  position="static"
-                  size={isLargerThan800 ? "md" : "sm"}
-                  bgColor="secondary"
-                  color="white"
-                  _hover={{ backgroundColor: '#292929' }}
-                >
-                  Github
-                </Button>
-              </Link>
               <Link href="https://dsc.gg/tyger" isExternal>
                 <Button
                   leftIcon={<FaDiscord color="#F8C8DC" />}
