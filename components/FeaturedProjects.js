@@ -4,7 +4,6 @@ import {
   Heading,
   Text,
   SimpleGrid,
-  Flex,
   Box,
 } from '@chakra-ui/react'
 import NextLink from 'next/link'
