@@ -117,14 +117,14 @@ export default function Introduction() {
           transition={{ enter: { duration: 0.4, delay: 1.2 } }}
         >
           <Flex
-            marginLeft={{ base: 100, md: 200, lg: 300 }}
+            marginLeft={{ base: 100, md: 150, lg: 300 }}
             alignItems="normal"
             justifyContent="center"
             position="relative"
           >
             <Box
-              maxW={{ base: "312px", md: "452px", lg: "612px" }}
-              maxH={{ base: "312px", md: "452px", lg: "612px" }}
+              maxW={{ base: "312px", md: "412px", lg: "412px" }}
+              maxH={{ base: "312px", md: "412px", lg: "412px" }}
             >
               <Image
                 src={
