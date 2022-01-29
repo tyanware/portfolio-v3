@@ -10,13 +10,11 @@ import {
   SimpleGrid,
   Flex,
 } from "@chakra-ui/react";
-import { FaEnvelope, FaGithub, FaDiscord } from "react-icons/fa";
 import { AiFillInfoCircle } from "react-icons/ai";
 import useMediaQuery from "../hook/useMediaQuery";
 
 export default function Introduction() {
   const isLargerThan800 = useMediaQuery(800);
-  const isLargerThan900 = useMediaQuery(900);
   return (
     <>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
@@ -100,7 +98,7 @@ export default function Introduction() {
                   leftIcon={<AiFillInfoCircle fill="#F8C8DC" />}
                   transition="0.3s"
                   position="static"
-                  size={isLargerThan800 ? "lg" : "md"}
+                  size={isLargerThan800 ? "md" : "sm"}
                   bgColor="secondary"
                   color="white"
                   _hover={{ backgroundColor: '#292929' }}
@@ -128,7 +126,7 @@ export default function Introduction() {
             >
               <Image
                 src={
-                  isLargerThan900
+                  isLargerThan800
                     ? "https://i.imgur.com/7kNnaBE.png"
                     : ""
                 }
@@ -137,7 +135,7 @@ export default function Introduction() {
                 placeholder="blur"
                 maxW={{ base: "312px", md: "452px", lg: "612px" }}
                 maxH={{ base: "312px", md: "452px", lg: "612px" }}
-                alt={isLargerThan900 ? "tygerxqt" : ""}
+                alt={isLargerThan800 ? "tygerxqt" : ""}
                 pos="intrinsic"
               />
             </Box>
