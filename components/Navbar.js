@@ -1,10 +1,8 @@
 import React, { useRef } from "react";
-import { useRouter } from "next/router";
 import {
   Button,
   Flex,
   Box,
-  Text,
   Slide,
   useDisclosure,
   Drawer,
@@ -15,11 +13,6 @@ import {
   DrawerBody,
   Stack,
   Icon,
-  Alert,
-  AlertDescription,
-  AlertTitle,
-  AlertIcon,
-  Image,
   Heading
 } from "@chakra-ui/react";
 import NextLink from "next/link";
@@ -54,11 +47,6 @@ export default function Navbar({ enableTransition }) {
               <NextLink href="/projects" passHref>
                 <Button as="a" variant="ghost" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Projects
-                </Button>
-              </NextLink>
-              <NextLink href="/photography" passHref>
-                <Button as="a" variant="ghost" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
-                  Photography
                 </Button>
               </NextLink>
               <NextLink href="/blog" passHref>
@@ -99,7 +87,6 @@ export default function Navbar({ enableTransition }) {
             background="black"
           >
           <NextLink href="/" passHref>
-              {/* <Image src="https://i.imgur.com/ugZMXh0.png" alt="tygr logo" width="118px" height="48px" /> */}
               <Heading as="a" fontSize="24px" fontWeight="bold" color="white">
                 tygerxqt.
               </Heading>
@@ -114,11 +101,6 @@ export default function Navbar({ enableTransition }) {
               <NextLink href="/projects" passHref>
                 <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
                   Projects
-                </Button>
-              </NextLink>
-              <NextLink href="/photography" passHref>
-                <Button as="a" variant="ghost" p="4" ml="3vw" fontSize="16px" _hover={{ backgroundColor: '#292929' }}>
-                  Photography
                 </Button>
               </NextLink>
               <NextLink href="/blog" passHref>
