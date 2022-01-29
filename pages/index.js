@@ -3,7 +3,6 @@ import { Stack } from "@chakra-ui/react";
 import Container from "../components/Container";
 import Introduction from "../components/Introduction";
 import FeaturedProjects from "../components/FeaturedProjects";
-import PhotographyHighlights from "../components/PhotographyHighlights";
 import AboutMe from "../components/AboutMe";
 import ContactMe from "../components/ContactMe";
 
@@ -53,7 +52,6 @@ export default function Index({ projects, photos }) {
           <Introduction />
           <AboutMe />
           <FeaturedProjects projects={projects} />
-          <PhotographyHighlights/>
           <ContactMe />
         </Stack>
       </Container>
