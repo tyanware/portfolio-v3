@@ -10,13 +10,11 @@ import {
   SimpleGrid,
   Flex,
 } from "@chakra-ui/react";
-import { FaEnvelope, FaGithub, FaDiscord } from "react-icons/fa";
 import { AiFillInfoCircle } from "react-icons/ai";
 import useMediaQuery from "../hook/useMediaQuery";
 
 export default function Introduction() {
   const isLargerThan800 = useMediaQuery(800);
-  const isLargerThan900 = useMediaQuery(900);
   return (
     <>
       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
@@ -95,43 +93,6 @@ export default function Introduction() {
             transition={{ enter: { duration: 0.4, delay: 1.0 } }}
           >
             <Stack isInline spacing={4}>
-              <Link href="https://github.com/tygerxqt" isExternal>
-                <Button
-                  leftIcon={<FaGithub color="#F8C8DC" />}
-                  position="static"
-                  size={isLargerThan800 ? "md" : "sm"}
-                  bgColor="secondary"
-                  color="white"
-                  _hover={{ backgroundColor: '#292929' }}
-                >
-                  Github
-                </Button>
-              </Link>
-              <Link href="https://dsc.gg/tyger" isExternal>
-                <Button
-                  leftIcon={<FaDiscord color="#F8C8DC" />}
-                  position="static"
-                  size={isLargerThan800 ? "md" : "sm"}
-                  bgColor="secondary"
-                  color="white"
-                  _hover={{ backgroundColor: '#292929' }}
-                >
-                  Discord
-                </Button>
-              </Link>
-              <Link href="mailto:tygerxqt@gmail.com" isExternal>
-                <Button
-                  leftIcon={<FaEnvelope fill="#F8C8DC" />}
-                  transition="0.3s"
-                  position="static"
-                  size={isLargerThan800 ? "md" : "sm"}
-                  bgColor="secondary"
-                  color="white"
-                  _hover={{ backgroundColor: '#292929' }}
-                >
-                  Email
-                </Button>
-              </Link>
               <Link href="/blog/an-update">
                 <Button
                   leftIcon={<AiFillInfoCircle fill="#F8C8DC" />}
@@ -154,18 +115,18 @@ export default function Introduction() {
           transition={{ enter: { duration: 0.4, delay: 1.2 } }}
         >
           <Flex
-            marginLeft={{ base: 100, md: 200, lg: 300 }}
+            marginLeft={{ base: 100, md: 150, lg: 300 }}
             alignItems="normal"
             justifyContent="center"
             position="relative"
           >
             <Box
-              maxW={{ base: "312px", md: "452px", lg: "612px" }}
-              maxH={{ base: "312px", md: "452px", lg: "612px" }}
+              maxW={{ base: "312px", md: "412px", lg: "412px" }}
+              maxH={{ base: "312px", md: "412px", lg: "412px" }}
             >
               <Image
                 src={
-                  isLargerThan900
+                  isLargerThan800
                     ? "https://i.imgur.com/7kNnaBE.png"
                     : ""
                 }
@@ -174,7 +135,7 @@ export default function Introduction() {
                 placeholder="blur"
                 maxW={{ base: "312px", md: "452px", lg: "612px" }}
                 maxH={{ base: "312px", md: "452px", lg: "612px" }}
-                alt={isLargerThan900 ? "tygerxqt" : ""}
+                alt={isLargerThan800 ? "tygerxqt" : ""}
                 pos="intrinsic"
               />
             </Box>

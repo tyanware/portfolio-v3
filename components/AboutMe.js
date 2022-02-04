@@ -47,7 +47,7 @@ export default function AboutMe() {
 
   return (
     <>
-      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+      <SimpleGrid columns={isLargerThan1200 ? "2" : "1"} spacing={8}>
         <SlideUpWhenVisible>
           <Stack spacing={4}>
             <Heading fontFamily="Ubuntu" fontSize="2xl">

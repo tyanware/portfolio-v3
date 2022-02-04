@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Flex, Stack, Text, Link } from "@chakra-ui/react";
 import Navbar from "./Navbar";
 
@@ -12,14 +12,6 @@ const Container = ({ enableTransition, children }) => {
       <Stack alignItems="center" mt={10} mb={5}>
         <Text textAlign="center" fontSize="sm">
           Designed and Developed by tygerxqt.
-          {/* Profile Picture by{" "} */}
-          {/* <Link
-            href="https://www.instagram.com/klxrka/"
-            fontWeight="semibold"
-            color="button1"
-          >
-            @klxrka 
-          </Link> */}
           <br />
           Built with{" "}
           <Link
