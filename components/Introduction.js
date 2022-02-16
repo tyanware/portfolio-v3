@@ -106,6 +106,19 @@ export default function Introduction() {
                   An Update
                 </Button>
               </Link>
+              <Link href="/donate">
+                <Button
+                  leftIcon={<AiFillInfoCircle fill="#F8C8DC" />}
+                  transition="0.3s"
+                  position="static"
+                  size={isLargerThan800 ? "md" : "sm"}
+                  bgColor="secondary"
+                  color="white"
+                  _hover={{ backgroundColor: '#292929' }}
+                >
+                  Donate
+                </Button>
+              </Link>
             </Stack>
           </SlideFade>
         </Stack>

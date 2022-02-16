@@ -38,7 +38,22 @@ module.exports = {
         source: '/mail',
         destination: 'mailto:tygerxqt@nordstud.io',
         permanent: true,
-      }
+      },
+      {
+        source: '/donate',
+        destination: 'https://ko-fi.com/tygerxqt',
+        permanent: true,
+      },
+      {
+        source: '/subscribe',
+        destination: 'https://ko-fi.com/tygerxqt',
+        permanent: true,
+      },
+      {
+        source: '/sub',
+        destination: 'https://ko-fi.com/tygerxqt',
+        permanent: true,
+      },
     ]
   }
 }
