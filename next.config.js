@@ -54,6 +54,11 @@ module.exports = {
         destination: 'https://ko-fi.com/tygerxqt',
         permanent: true,
       },
+      {
+        source: '/pixels',
+        destination: 'https://tygr.dev/blog/introducing-pixels',
+        permanent: true,
+      }
     ]
   }
 }
